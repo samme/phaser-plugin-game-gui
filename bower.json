@@ -1,0 +1,28 @@
+{
+  "name": "phaser-plugin-game-gui",
+  "description": "Inspect and manipulate some common game settings",
+  "main": "index.js",
+  "authors": [
+    "samme"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "phaser"
+  ],
+  "homepage": "https://github.com/samme/phaser-plugin-game-gui#readme",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "*.coffee",
+    "*.html",
+    "*.png",
+    "example/"
+  ],
+  "dependencies": {
+    "phaser": "^2.6.2"
+  }
+}

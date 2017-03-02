@@ -1,0 +1,25 @@
+env:
+  browser: yes
+extends: 'eslint:recommended'
+globals:
+  Phaser: no
+rules:
+  indent:
+    - 'off'
+  linebreak-style:
+    - warn
+    - unix
+  no-console:
+    - error
+    - allow:
+      - warn
+  no-shadow:
+    - warn # normal for class GameGuiPlugin
+  no-unused-vars:
+    - warn # normal for class GameGuiPlugin
+  quotes:
+    - warn
+    - double
+  semi:
+    - warn
+    - always

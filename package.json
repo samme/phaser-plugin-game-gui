@@ -1,0 +1,35 @@
+{
+  "name": "phaser-plugin-game-gui",
+  "version": "0.0.0",
+  "description": "Inspect and manipulate some common game settings",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "start": "coffeebar --watch .",
+    "postinstall": "[[ -d ./example ]] && cp ./node_modules/dat.gui/build/dat.gui.js ./example",
+    "preversion": "eslint index.js example/index.js",
+    "pub": "np --no-cleanup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samme/phaser-plugin-game-gui.git"
+  },
+  "keywords": [
+    "phaser"
+  ],
+  "author": "samme",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samme/phaser-plugin-game-gui/issues"
+  },
+  "homepage": "https://github.com/samme/phaser-plugin-game-gui#readme",
+  "dependencies": {
+    "dat.gui": "^0.6.1",
+    "phaser": "^2.6.2"
+  },
+  "devDependencies": {
+    "coffeebar": "^1.0.0"
+  }
+}
