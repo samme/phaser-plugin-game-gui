@@ -1,5 +1,7 @@
 ![Screenshot](https://samme.github.io/phaser-plugin-game-gui/screenshot.png)
 
+[Demo](https://samme.github.io/phaser-plugin-game-gui/)
+
 Quick access to some common game settings and commands:
 
   - pause, frame step
@@ -41,7 +43,7 @@ gameGuiPlugin.gui.destroy();
 Issues
 ------
 
-- <https://github.com/dataarts/dat.gui/issues/124> (dat.gui@0.6.1)
+- [dataarts/dat.gui/issues/124](https://github.com/dataarts/dat.gui/issues/124) (dat.gui@0.6.1)
 
   A workaround:
 
