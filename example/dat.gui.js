@@ -2,7 +2,7 @@
 	if(typeof exports === 'object' && typeof module === 'object')
 		module.exports = factory();
 	else if(typeof define === 'function' && define.amd)
-		define(factory);
+		define([], factory);
 	else if(typeof exports === 'object')
 		exports["dat"] = factory();
 	else
@@ -56,7 +56,24 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	module.exports = __webpack_require__(1);
+	var _index = __webpack_require__(1);
+	
+	var _index2 = _interopRequireDefault(_index);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	module.exports = _index2.default; /**
+	                                   * dat-gui JavaScript Controller Library
+	                                   * http://code.google.com/p/dat-gui
+	                                   *
+	                                   * Copyright 2011 Data Arts Team, Google Creative Lab
+	                                   *
+	                                   * Licensed under the Apache License, Version 2.0 (the "License");
+	                                   * you may not use this file except in compliance with the License.
+	                                   * You may obtain a copy of the License at
+	                                   *
+	                                   * http://www.apache.org/licenses/LICENSE-2.0
+	                                   */
 
 /***/ },
 /* 1 */
@@ -64,40 +81,66 @@ return /******/ (function(modules) { // webpackBootstrap
 
 	'use strict';
 	
-	module.exports = {
-	  color: {
-	    Color: __webpack_require__(2),
-	    math: __webpack_require__(6),
-	    interpret: __webpack_require__(3)
-	  },
+	exports.__esModule = true;
 	
-	  controllers: {
-	    Controller: __webpack_require__(7),
-	    BooleanController: __webpack_require__(8),
-	    OptionController: __webpack_require__(10),
-	    StringController: __webpack_require__(11),
-	    NumberController: __webpack_require__(12),
-	    NumberControllerBox: __webpack_require__(13),
-	    NumberControllerSlider: __webpack_require__(14),
-	    FunctionController: __webpack_require__(20),
-	    ColorController: __webpack_require__(21)
-	  },
+	var _Color = __webpack_require__(2);
 	
-	  dom: {
-	    dom: __webpack_require__(9)
-	  },
+	var _Color2 = _interopRequireDefault(_Color);
 	
-	  gui: {
-	    GUI: __webpack_require__(22)
-	  },
+	var _math = __webpack_require__(6);
 	
-	  GUI: __webpack_require__(22)
-	};
-
-/***/ },
-/* 2 */
-/***/ function(module, exports, __webpack_require__) {
-
+	var _math2 = _interopRequireDefault(_math);
+	
+	var _interpret = __webpack_require__(3);
+	
+	var _interpret2 = _interopRequireDefault(_interpret);
+	
+	var _Controller = __webpack_require__(7);
+	
+	var _Controller2 = _interopRequireDefault(_Controller);
+	
+	var _BooleanController = __webpack_require__(8);
+	
+	var _BooleanController2 = _interopRequireDefault(_BooleanController);
+	
+	var _OptionController = __webpack_require__(10);
+	
+	var _OptionController2 = _interopRequireDefault(_OptionController);
+	
+	var _StringController = __webpack_require__(11);
+	
+	var _StringController2 = _interopRequireDefault(_StringController);
+	
+	var _NumberController = __webpack_require__(12);
+	
+	var _NumberController2 = _interopRequireDefault(_NumberController);
+	
+	var _NumberControllerBox = __webpack_require__(13);
+	
+	var _NumberControllerBox2 = _interopRequireDefault(_NumberControllerBox);
+	
+	var _NumberControllerSlider = __webpack_require__(14);
+	
+	var _NumberControllerSlider2 = _interopRequireDefault(_NumberControllerSlider);
+	
+	var _FunctionController = __webpack_require__(15);
+	
+	var _FunctionController2 = _interopRequireDefault(_FunctionController);
+	
+	var _ColorController = __webpack_require__(16);
+	
+	var _ColorController2 = _interopRequireDefault(_ColorController);
+	
+	var _dom = __webpack_require__(9);
+	
+	var _dom2 = _interopRequireDefault(_dom);
+	
+	var _GUI = __webpack_require__(17);
+	
+	var _GUI2 = _interopRequireDefault(_GUI);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
 	/**
 	 * dat-gui JavaScript Controller Library
 	 * http://code.google.com/p/dat-gui
@@ -111,13 +154,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.apache.org/licenses/LICENSE-2.0
 	 */
 	
+	exports.default = {
+	  color: {
+	    Color: _Color2.default,
+	    math: _math2.default,
+	    interpret: _interpret2.default
+	  },
+	
+	  controllers: {
+	    Controller: _Controller2.default,
+	    BooleanController: _BooleanController2.default,
+	    OptionController: _OptionController2.default,
+	    StringController: _StringController2.default,
+	    NumberController: _NumberController2.default,
+	    NumberControllerBox: _NumberControllerBox2.default,
+	    NumberControllerSlider: _NumberControllerSlider2.default,
+	    FunctionController: _FunctionController2.default,
+	    ColorController: _ColorController2.default
+	  },
+	
+	  dom: {
+	    dom: _dom2.default
+	  },
+	
+	  gui: {
+	    GUI: _GUI2.default
+	  },
+	
+	  GUI: _GUI2.default
+	};
+
+/***/ },
+/* 2 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	
 	exports.__esModule = true;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 	
 	var _interpret = __webpack_require__(3);
 	
@@ -131,15 +204,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _toString2 = _interopRequireDefault(_toString);
 	
-	var _utilsCommon = __webpack_require__(5);
+	var _common = __webpack_require__(5);
 	
-	var _utilsCommon2 = _interopRequireDefault(_utilsCommon);
+	var _common2 = _interopRequireDefault(_common);
 	
-	var Color = (function () {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } } /**
+	                                                                                                                                                           * dat-gui JavaScript Controller Library
+	                                                                                                                                                           * http://code.google.com/p/dat-gui
+	                                                                                                                                                           *
+	                                                                                                                                                           * Copyright 2011 Data Arts Team, Google Creative Lab
+	                                                                                                                                                           *
+	                                                                                                                                                           * Licensed under the Apache License, Version 2.0 (the "License");
+	                                                                                                                                                           * you may not use this file except in compliance with the License.
+	                                                                                                                                                           * You may obtain a copy of the License at
+	                                                                                                                                                           *
+	                                                                                                                                                           * http://www.apache.org/licenses/LICENSE-2.0
+	                                                                                                                                                           */
+	
+	var Color = function () {
 	  function Color() {
 	    _classCallCheck(this, Color);
 	
-	    this.__state = _interpret2['default'].apply(this, arguments);
+	    this.__state = _interpret2.default.apply(this, arguments);
 	
 	    if (this.__state === false) {
 	      throw new Error('Failed to interpret color arguments');
@@ -149,7 +237,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	
 	  Color.prototype.toString = function toString() {
-	    return _toString2['default'](this);
+	    return (0, _toString2.default)(this);
+	  };
+	
+	  Color.prototype.toHexString = function toHexString() {
+	    return (0, _toString2.default)(this, true);
 	  };
 	
 	  Color.prototype.toOriginal = function toOriginal() {
@@ -157,67 +249,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	
 	  return Color;
-	})();
-	
-	Color.recalculateRGB = function (color, component, componentHexIndex) {
-	  if (color.__state.space === 'HEX') {
-	    color.__state[component] = _math2['default'].component_from_hex(color.__state.hex, componentHexIndex);
-	  } else if (color.__state.space === 'HSV') {
-	    _utilsCommon2['default'].extend(color.__state, _math2['default'].hsv_to_rgb(color.__state.h, color.__state.s, color.__state.v));
-	  } else {
-	    throw new Error('Corrupted color state');
-	  }
-	};
-	
-	Color.recalculateHSV = function (color) {
-	  var result = _math2['default'].rgb_to_hsv(color.r, color.g, color.b);
-	
-	  _utilsCommon2['default'].extend(color.__state, {
-	    s: result.s,
-	    v: result.v
-	  });
-	
-	  if (!_utilsCommon2['default'].isNaN(result.h)) {
-	    color.__state.h = result.h;
-	  } else if (_utilsCommon2['default'].isUndefined(color.__state.h)) {
-	    color.__state.h = 0;
-	  }
-	};
-	
-	Color.COMPONENTS = ['r', 'g', 'b', 'h', 's', 'v', 'hex', 'a'];
-	
-	defineRGBComponent(Color.prototype, 'r', 2);
-	defineRGBComponent(Color.prototype, 'g', 1);
-	defineRGBComponent(Color.prototype, 'b', 0);
-	
-	defineHSVComponent(Color.prototype, 'h');
-	defineHSVComponent(Color.prototype, 's');
-	defineHSVComponent(Color.prototype, 'v');
-	
-	Object.defineProperty(Color.prototype, 'a', {
-	  get: function get() {
-	    return this.__state.a;
-	  },
-	
-	  set: function set(v) {
-	    this.__state.a = v;
-	  }
-	});
-	
-	Object.defineProperty(Color.prototype, 'hex', {
-	  get: function get() {
-	    if (!this.__state.space !== 'HEX') {
-	      this.__state.hex = _math2['default'].rgb_to_hex(this.r, this.g, this.b);
-	    }
-	
-	    return this.__state.hex;
-	  },
-	
-	  set: function set(v) {
-	    this.__state.space = 'HEX';
-	    this.__state.hex = v;
-	  }
-	});
+	}();
 	
 	function defineRGBComponent(target, component, componentHexIndex) {
 	  Object.defineProperty(target, component, {
@@ -265,13 +297,86 @@ return /******/ (function(modules) { // webpackBootstrap
 	  });
 	}
 	
-	exports['default'] = Color;
-	module.exports = exports['default'];
+	Color.recalculateRGB = function (color, component, componentHexIndex) {
+	  if (color.__state.space === 'HEX') {
+	    color.__state[component] = _math2.default.component_from_hex(color.__state.hex, componentHexIndex);
+	  } else if (color.__state.space === 'HSV') {
+	    _common2.default.extend(color.__state, _math2.default.hsv_to_rgb(color.__state.h, color.__state.s, color.__state.v));
+	  } else {
+	    throw new Error('Corrupted color state');
+	  }
+	};
+	
+	Color.recalculateHSV = function (color) {
+	  var result = _math2.default.rgb_to_hsv(color.r, color.g, color.b);
+	
+	  _common2.default.extend(color.__state, {
+	    s: result.s,
+	    v: result.v
+	  });
+	
+	  if (!_common2.default.isNaN(result.h)) {
+	    color.__state.h = result.h;
+	  } else if (_common2.default.isUndefined(color.__state.h)) {
+	    color.__state.h = 0;
+	  }
+	};
+	
+	Color.COMPONENTS = ['r', 'g', 'b', 'h', 's', 'v', 'hex', 'a'];
+	
+	defineRGBComponent(Color.prototype, 'r', 2);
+	defineRGBComponent(Color.prototype, 'g', 1);
+	defineRGBComponent(Color.prototype, 'b', 0);
+	
+	defineHSVComponent(Color.prototype, 'h');
+	defineHSVComponent(Color.prototype, 's');
+	defineHSVComponent(Color.prototype, 'v');
+	
+	Object.defineProperty(Color.prototype, 'a', {
+	  get: function get() {
+	    return this.__state.a;
+	  },
+	
+	  set: function set(v) {
+	    this.__state.a = v;
+	  }
+	});
+	
+	Object.defineProperty(Color.prototype, 'hex', {
+	  get: function get() {
+	    if (!this.__state.space !== 'HEX') {
+	      this.__state.hex = _math2.default.rgb_to_hex(this.r, this.g, this.b);
+	    }
+	
+	    return this.__state.hex;
+	  },
+	
+	  set: function set(v) {
+	    this.__state.space = 'HEX';
+	    this.__state.hex = v;
+	  }
+	});
+	
+	exports.default = Color;
 
 /***/ },
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+	
+	exports.__esModule = true;
+	
+	var _toString = __webpack_require__(4);
+	
+	var _toString2 = _interopRequireDefault(_toString);
+	
+	var _common = __webpack_require__(5);
+	
+	var _common2 = _interopRequireDefault(_common);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
 	/**
 	 * dat-gui JavaScript Controller Library
 	 * http://code.google.com/p/dat-gui
@@ -285,24 +390,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.apache.org/licenses/LICENSE-2.0
 	 */
 	
-	'use strict';
-	
-	exports.__esModule = true;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	var _toString = __webpack_require__(4);
-	
-	var _toString2 = _interopRequireDefault(_toString);
-	
-	var _utilsCommon = __webpack_require__(5);
-	
-	var _utilsCommon2 = _interopRequireDefault(_utilsCommon);
-	
 	var INTERPRETATIONS = [
 	// Strings
 	{
-	  litmus: _utilsCommon2['default'].isString,
+	  litmus: _common2.default.isString,
 	  conversions: {
 	    THREE_CHAR_HEX: {
 	      read: function read(original) {
@@ -317,7 +408,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        };
 	      },
 	
-	      write: _toString2['default']
+	      write: _toString2.default
 	    },
 	
 	    SIX_CHAR_HEX: {
@@ -333,7 +424,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	        };
 	      },
 	
-	      write: _toString2['default']
+	      write: _toString2.default
 	    },
 	
 	    CSS_RGB: {
@@ -351,12 +442,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	        };
 	      },
 	
-	      write: _toString2['default']
+	      write: _toString2.default
 	    },
 	
 	    CSS_RGBA: {
 	      read: function read(original) {
-	        var test = original.match(/^rgba\(\s*(.+)\s*,\s*(.+)\s*,\s*(.+)\s*\,\s*(.+)\s*\)/);
+	        var test = original.match(/^rgba\(\s*(.+)\s*,\s*(.+)\s*,\s*(.+)\s*,\s*(.+)\s*\)/);
 	        if (test === null) {
 	          return false;
 	        }
@@ -370,14 +461,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	        };
 	      },
 	
-	      write: _toString2['default']
+	      write: _toString2.default
 	    }
 	  }
 	},
 	
 	// Numbers
 	{
-	  litmus: _utilsCommon2['default'].isNumber,
+	  litmus: _common2.default.isNumber,
 	
 	  conversions: {
 	
@@ -401,7 +492,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	// Arrays
 	{
-	  litmus: _utilsCommon2['default'].isArray,
+	  litmus: _common2.default.isArray,
 	  conversions: {
 	    RGB_ARRAY: {
 	      read: function read(original) {
@@ -443,12 +534,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	// Objects
 	{
-	  litmus: _utilsCommon2['default'].isObject,
+	  litmus: _common2.default.isObject,
 	  conversions: {
 	
 	    RGBA_OBJ: {
 	      read: function read(original) {
-	        if (_utilsCommon2['default'].isNumber(original.r) && _utilsCommon2['default'].isNumber(original.g) && _utilsCommon2['default'].isNumber(original.b) && _utilsCommon2['default'].isNumber(original.a)) {
+	        if (_common2.default.isNumber(original.r) && _common2.default.isNumber(original.g) && _common2.default.isNumber(original.b) && _common2.default.isNumber(original.a)) {
 	          return {
 	            space: 'RGB',
 	            r: original.r,
@@ -472,7 +563,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    RGB_OBJ: {
 	      read: function read(original) {
-	        if (_utilsCommon2['default'].isNumber(original.r) && _utilsCommon2['default'].isNumber(original.g) && _utilsCommon2['default'].isNumber(original.b)) {
+	        if (_common2.default.isNumber(original.r) && _common2.default.isNumber(original.g) && _common2.default.isNumber(original.b)) {
 	          return {
 	            space: 'RGB',
 	            r: original.r,
@@ -494,7 +585,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    HSVA_OBJ: {
 	      read: function read(original) {
-	        if (_utilsCommon2['default'].isNumber(original.h) && _utilsCommon2['default'].isNumber(original.s) && _utilsCommon2['default'].isNumber(original.v) && _utilsCommon2['default'].isNumber(original.a)) {
+	        if (_common2.default.isNumber(original.h) && _common2.default.isNumber(original.s) && _common2.default.isNumber(original.v) && _common2.default.isNumber(original.a)) {
 	          return {
 	            space: 'HSV',
 	            h: original.h,
@@ -518,7 +609,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    HSV_OBJ: {
 	      read: function read(original) {
-	        if (_utilsCommon2['default'].isNumber(original.h) && _utilsCommon2['default'].isNumber(original.s) && _utilsCommon2['default'].isNumber(original.v)) {
+	        if (_common2.default.isNumber(original.h) && _common2.default.isNumber(original.s) && _common2.default.isNumber(original.v)) {
 	          return {
 	            space: 'HSV',
 	            h: original.h,
@@ -540,81 +631,90 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	}];
 	
-	var result = undefined;
-	var toReturn = undefined;
+	var result = void 0;
+	var toReturn = void 0;
 	
 	var interpret = function interpret() {
 	  toReturn = false;
 	
-	  var original = arguments.length > 1 ? _utilsCommon2['default'].toArray(arguments) : arguments[0];
-	  _utilsCommon2['default'].each(INTERPRETATIONS, function (family) {
+	  var original = arguments.length > 1 ? _common2.default.toArray(arguments) : arguments[0];
+	  _common2.default.each(INTERPRETATIONS, function (family) {
 	    if (family.litmus(original)) {
-	      _utilsCommon2['default'].each(family.conversions, function (conversion, conversionName) {
+	      _common2.default.each(family.conversions, function (conversion, conversionName) {
 	        result = conversion.read(original);
 	
 	        if (toReturn === false && result !== false) {
 	          toReturn = result;
 	          result.conversionName = conversionName;
 	          result.conversion = conversion;
-	          return _utilsCommon2['default'].BREAK;
+	          return _common2.default.BREAK;
 	        }
 	      });
 	
-	      return _utilsCommon2['default'].BREAK;
+	      return _common2.default.BREAK;
 	    }
 	  });
 	
 	  return toReturn;
 	};
 	
-	exports['default'] = interpret;
-	module.exports = exports['default'];
+	exports.default = interpret;
 
 /***/ },
 /* 4 */
-/***/ function(module, exports, __webpack_require__) {
+/***/ function(module, exports) {
 
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	exports.default = function (color, forceCSSHex) {
+	  var colorFormat = color.__state.conversionName.toString();
 	
-	var _utilsCommon = __webpack_require__(5);
+	  var r = Math.round(color.r);
+	  var g = Math.round(color.g);
+	  var b = Math.round(color.b);
+	  var a = color.a;
+	  var h = Math.round(color.h);
+	  var s = color.s.toFixed(1);
+	  var v = color.v.toFixed(1);
 	
-	var _utilsCommon2 = _interopRequireDefault(_utilsCommon);
-	
-	exports['default'] = function (color) {
-	  if (color.a === 1 || _utilsCommon2['default'].isUndefined(color.a)) {
-	    var s = color.hex.toString(16);
-	    while (s.length < 6) {
-	      s = '0' + s;
+	  if (forceCSSHex || colorFormat === 'THREE_CHAR_HEX' || colorFormat === 'SIX_CHAR_HEX') {
+	    var str = color.hex.toString(16);
+	    while (str.length < 6) {
+	      str = '0' + str;
 	    }
-	    return '#' + s;
+	    return '#' + str;
+	  } else if (colorFormat === 'CSS_RGB') {
+	    return 'rgb(' + r + ',' + g + ',' + b + ')';
+	  } else if (colorFormat === 'CSS_RGBA') {
+	    return 'rgba(' + r + ',' + g + ',' + b + ',' + a + ')';
+	  } else if (colorFormat === 'HEX') {
+	    return '0x' + color.hex.toString(16);
+	  } else if (colorFormat === 'RGB_ARRAY') {
+	    return '[' + r + ',' + g + ',' + b + ']';
+	  } else if (colorFormat === 'RGBA_ARRAY') {
+	    return '[' + r + ',' + g + ',' + b + ',' + a + ']';
+	  } else if (colorFormat === 'RGB_OBJ') {
+	    return '{r:' + r + ',g:' + g + ',b:' + b + '}';
+	  } else if (colorFormat === 'RGBA_OBJ') {
+	    return '{r:' + r + ',g:' + g + ',b:' + b + ',a:' + a + '}';
+	  } else if (colorFormat === 'HSV_OBJ') {
+	    return '{h:' + h + ',s:' + s + ',v:' + v + '}';
+	  } else if (colorFormat === 'HSVA_OBJ') {
+	    return '{h:' + h + ',s:' + s + ',v:' + v + ',a:' + a + '}';
 	  }
 	
-	  return 'rgba(' + Math.round(color.r) + ',' + Math.round(color.g) + ',' + Math.round(color.b) + ',' + color.a + ')';
+	  return 'unknown format';
 	};
-	
-	module.exports = exports['default'];
 
 /***/ },
 /* 5 */
 /***/ function(module, exports) {
 
+	'use strict';
+	
+	exports.__esModule = true;
 	/**
 	 * dat-gui JavaScript Controller Library
 	 * http://code.google.com/p/dat-gui
@@ -628,9 +728,6 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.apache.org/licenses/LICENSE-2.0
 	 */
 	
-	'use strict';
-	
-	exports.__esModule = true;
 	var ARR_EACH = Array.prototype.forEach;
 	var ARR_SLICE = Array.prototype.slice;
 	
@@ -645,11 +742,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  extend: function extend(target) {
 	    this.each(ARR_SLICE.call(arguments, 1), function (obj) {
-	      for (var key in obj) {
+	      var keys = this.isObject(obj) ? Object.keys(obj) : [];
+	      keys.forEach(function (key) {
 	        if (!this.isUndefined(obj[key])) {
 	          target[key] = obj[key];
 	        }
-	      }
+	      }.bind(this));
 	    }, this);
 	
 	    return target;
@@ -657,11 +755,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  defaults: function defaults(target) {
 	    this.each(ARR_SLICE.call(arguments, 1), function (obj) {
-	      for (var key in obj) {
+	      var keys = this.isObject(obj) ? Object.keys(obj) : [];
+	      keys.forEach(function (key) {
 	        if (this.isUndefined(target[key])) {
 	          target[key] = obj[key];
 	        }
-	      }
+	      }.bind(this));
 	    }, this);
 	
 	    return target;
@@ -687,16 +786,16 @@ return /******/ (function(modules) { // webpackBootstrap
 	      obj.forEach(itr, scope);
 	    } else if (obj.length === obj.length + 0) {
 	      // Is number but not NaN
-	      var key = undefined;
-	      var l = undefined;
+	      var key = void 0;
+	      var l = void 0;
 	      for (key = 0, l = obj.length; key < l; key++) {
 	        if (key in obj && itr.call(scope, obj[key], key) === this.BREAK) {
 	          return;
 	        }
 	      }
 	    } else {
-	      for (var key in obj) {
-	        if (itr.call(scope, obj[key], key) === this.BREAK) {
+	      for (var _key in obj) {
+	        if (itr.call(scope, obj[_key], _key) === this.BREAK) {
 	          return;
 	        }
 	      }
@@ -705,6 +804,28 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  defer: function defer(fnc) {
 	    setTimeout(fnc, 0);
+	  },
+	
+	  // call the function immediately, but wait until threshold passes to allow it to be called again
+	  debounce: function debounce(func, threshold) {
+	    var timeout = void 0;
+	
+	    return function () {
+	      var obj = this;
+	      var args = arguments;
+	      function delayed() {
+	        timeout = null;
+	      }
+	
+	      var allowCall = !timeout;
+	
+	      clearTimeout(timeout);
+	      timeout = setTimeout(delayed, threshold);
+	
+	      if (allowCall) {
+	        func.apply(obj, args);
+	      }
+	    };
 	  },
 	
 	  toArray: function toArray(obj) {
@@ -720,7 +841,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    return obj === null;
 	  },
 	
-	  isNaN: (function (_isNaN) {
+	  isNaN: function (_isNaN) {
 	    function isNaN(_x) {
 	      return _isNaN.apply(this, arguments);
 	    }
@@ -730,7 +851,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    };
 	
 	    return isNaN;
-	  })(function (obj) {
+	  }(function (obj) {
 	    return isNaN(obj);
 	  }),
 	
@@ -760,13 +881,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	};
 	
-	exports['default'] = Common;
-	module.exports = exports['default'];
+	exports.default = Common;
 
 /***/ },
 /* 6 */
 /***/ function(module, exports) {
 
+	"use strict";
+	
+	exports.__esModule = true;
 	/**
 	 * dat-gui JavaScript Controller Library
 	 * http://code.google.com/p/dat-gui
@@ -780,10 +903,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.apache.org/licenses/LICENSE-2.0
 	 */
 	
-	"use strict";
-	
-	exports.__esModule = true;
-	var tmpComponent = undefined;
+	var tmpComponent = void 0;
 	
 	var ColorMath = {
 	  hsv_to_rgb: function hsv_to_rgb(h, s, v) {
@@ -807,8 +927,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var min = Math.min(r, g, b);
 	    var max = Math.max(r, g, b);
 	    var delta = max - min;
-	    var h = undefined;
-	    var s = undefined;
+	    var h = void 0;
+	    var s = void 0;
 	
 	    if (max !== 0) {
 	      s = delta / max;
@@ -855,13 +975,18 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	};
 	
-	exports["default"] = ColorMath;
-	module.exports = exports["default"];
+	exports.default = ColorMath;
 
 /***/ },
 /* 7 */
 /***/ function(module, exports) {
 
+	'use strict';
+	
+	exports.__esModule = true;
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
 	/**
 	 * dat-gui JavaScript Controller Library
 	 * http://code.google.com/p/dat-gui
@@ -883,13 +1008,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @member dat.controllers
 	 */
-	'use strict';
-	
-	exports.__esModule = true;
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	var Controller = (function () {
+	var Controller = function () {
 	  function Controller(object, property) {
 	    _classCallCheck(this, Controller);
 	
@@ -937,6 +1056,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @returns {Controller} this
 	   */
 	
+	
 	  Controller.prototype.onChange = function onChange(fnc) {
 	    this.__onChange = fnc;
 	    return this;
@@ -952,6 +1072,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @returns {Controller} this
 	   */
 	
+	
 	  Controller.prototype.onFinishChange = function onFinishChange(fnc) {
 	    this.__onFinishChange = fnc;
 	    return this;
@@ -962,6 +1083,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   *
 	   * @param {Object} newValue The new value of <code>object[property]</code>
 	   */
+	
 	
 	  Controller.prototype.setValue = function setValue(newValue) {
 	    this.object[this.property] = newValue;
@@ -979,6 +1101,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @returns {Object} The current value of <code>object[property]</code>
 	   */
 	
+	
 	  Controller.prototype.getValue = function getValue() {
 	    return this.object[this.property];
 	  };
@@ -989,6 +1112,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @returns {Controller} this
 	   */
 	
+	
 	  Controller.prototype.updateDisplay = function updateDisplay() {
 	    return this;
 	  };
@@ -997,50 +1121,50 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @returns {Boolean} true if the value has deviated from initialValue
 	   */
 	
+	
 	  Controller.prototype.isModified = function isModified() {
 	    return this.initialValue !== this.getValue();
 	  };
 	
 	  return Controller;
-	})();
+	}();
 	
-	exports['default'] = Controller;
-	module.exports = exports['default'];
+	exports.default = Controller;
 
 /***/ },
 /* 8 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
 	'use strict';
 	
 	exports.__esModule = true;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _Controller2 = __webpack_require__(7);
 	
 	var _Controller3 = _interopRequireDefault(_Controller2);
 	
-	var _domDom = __webpack_require__(9);
+	var _dom = __webpack_require__(9);
 	
-	var _domDom2 = _interopRequireDefault(_domDom);
+	var _dom2 = _interopRequireDefault(_dom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * dat-gui JavaScript Controller Library
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://code.google.com/p/dat-gui
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2011 Data Arts Team, Google Creative Lab
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://www.apache.org/licenses/LICENSE-2.0
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 	
 	/**
 	 * @class Provides a checkbox input to alter the boolean property of an object.
@@ -1051,31 +1175,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @member dat.controllers
 	 */
-	
-	var BooleanController = (function (_Controller) {
+	var BooleanController = function (_Controller) {
 	  _inherits(BooleanController, _Controller);
 	
 	  function BooleanController(object, property) {
 	    _classCallCheck(this, BooleanController);
 	
-	    _Controller.call(this, object, property);
+	    var _this2 = _possibleConstructorReturn(this, _Controller.call(this, object, property));
 	
-	    var _this = this;
-	    this.__prev = this.getValue();
+	    var _this = _this2;
+	    _this2.__prev = _this2.getValue();
 	
-	    this.__checkbox = document.createElement('input');
-	    this.__checkbox.setAttribute('type', 'checkbox');
+	    _this2.__checkbox = document.createElement('input');
+	    _this2.__checkbox.setAttribute('type', 'checkbox');
 	
 	    function onChange() {
 	      _this.setValue(!_this.__prev);
 	    }
 	
-	    _domDom2['default'].bind(this.__checkbox, 'change', onChange, false);
+	    _dom2.default.bind(_this2.__checkbox, 'change', onChange, false);
 	
-	    this.domElement.appendChild(this.__checkbox);
+	    _this2.domElement.appendChild(_this2.__checkbox);
 	
 	    // Match original value
-	    this.updateDisplay();
+	    _this2.updateDisplay();
+	    return _this2;
 	  }
 	
 	  BooleanController.prototype.setValue = function setValue(v) {
@@ -1099,47 +1223,44 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	
 	  return BooleanController;
-	})(_Controller3['default']);
+	}(_Controller3.default);
 	
-	exports['default'] = BooleanController;
-	module.exports = exports['default'];
+	exports.default = BooleanController;
 
 /***/ },
 /* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	var _common = __webpack_require__(5);
 	
-	var _utilsCommon = __webpack_require__(5);
+	var _common2 = _interopRequireDefault(_common);
 	
-	var _utilsCommon2 = _interopRequireDefault(_utilsCommon);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var EVENT_MAP = {
-	  'HTMLEvents': ['change'],
-	  'MouseEvents': ['click', 'mousemove', 'mousedown', 'mouseup', 'mouseover'],
-	  'KeyboardEvents': ['keydown']
-	};
+	  HTMLEvents: ['change'],
+	  MouseEvents: ['click', 'mousemove', 'mousedown', 'mouseup', 'mouseover'],
+	  KeyboardEvents: ['keydown']
+	}; /**
+	    * dat-gui JavaScript Controller Library
+	    * http://code.google.com/p/dat-gui
+	    *
+	    * Copyright 2011 Data Arts Team, Google Creative Lab
+	    *
+	    * Licensed under the Apache License, Version 2.0 (the "License");
+	    * you may not use this file except in compliance with the License.
+	    * You may obtain a copy of the License at
+	    *
+	    * http://www.apache.org/licenses/LICENSE-2.0
+	    */
 	
 	var EVENT_MAP_INV = {};
-	_utilsCommon2['default'].each(EVENT_MAP, function (v, k) {
-	  _utilsCommon2['default'].each(v, function (e) {
+	_common2.default.each(EVENT_MAP, function (v, k) {
+	  _common2.default.each(v, function (e) {
 	    EVENT_MAP_INV[e] = k;
 	  });
 	});
@@ -1147,13 +1268,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	var CSS_VALUE_PIXELS = /(\d+(\.\d+)?)px/;
 	
 	function cssValueToPixels(val) {
-	  if (val === '0' || _utilsCommon2['default'].isUndefined(val)) {
+	  if (val === '0' || _common2.default.isUndefined(val)) {
 	    return 0;
 	  }
 	
 	  var match = val.match(CSS_VALUE_PIXELS);
 	
-	  if (!_utilsCommon2['default'].isNull(match)) {
+	  if (!_common2.default.isNull(match)) {
 	    return parseFloat(match[1]);
 	  }
 	
@@ -1195,11 +1316,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	    var vertical = vert;
 	    var horizontal = hor;
 	
-	    if (_utilsCommon2['default'].isUndefined(horizontal)) {
+	    if (_common2.default.isUndefined(horizontal)) {
 	      horizontal = true;
 	    }
 	
-	    if (_utilsCommon2['default'].isUndefined(vertical)) {
+	    if (_common2.default.isUndefined(vertical)) {
 	      vertical = true;
 	    }
 	
@@ -1243,7 +1364,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      case 'KeyboardEvents':
 	        {
 	          var init = evt.initKeyboardEvent || evt.initKeyEvent; // webkit || moz
-	          _utilsCommon2['default'].defaults(params, {
+	          _common2.default.defaults(params, {
 	            cancelable: true,
 	            ctrlKey: false,
 	            altKey: false,
@@ -1261,7 +1382,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	          break;
 	        }
 	    }
-	    _utilsCommon2['default'].defaults(evt, aux);
+	    _common2.default.defaults(evt, aux);
 	    elem.dispatchEvent(evt);
 	  },
 	
@@ -1392,47 +1513,46 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	};
 	
-	exports['default'] = dom;
-	module.exports = exports['default'];
+	exports.default = dom;
 
 /***/ },
 /* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
 	'use strict';
 	
 	exports.__esModule = true;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _Controller2 = __webpack_require__(7);
 	
 	var _Controller3 = _interopRequireDefault(_Controller2);
 	
-	var _domDom = __webpack_require__(9);
+	var _dom = __webpack_require__(9);
 	
-	var _domDom2 = _interopRequireDefault(_domDom);
+	var _dom2 = _interopRequireDefault(_dom);
 	
-	var _utilsCommon = __webpack_require__(5);
+	var _common = __webpack_require__(5);
 	
-	var _utilsCommon2 = _interopRequireDefault(_utilsCommon);
+	var _common2 = _interopRequireDefault(_common);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * dat-gui JavaScript Controller Library
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://code.google.com/p/dat-gui
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2011 Data Arts Team, Google Creative Lab
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://www.apache.org/licenses/LICENSE-2.0
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 	
 	/**
 	 * @class Provides a select input to alter the property of an object, using a
@@ -1447,36 +1567,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @member dat.controllers
 	 */
-	
-	var OptionController = (function (_Controller) {
+	var OptionController = function (_Controller) {
 	  _inherits(OptionController, _Controller);
 	
 	  function OptionController(object, property, opts) {
 	    _classCallCheck(this, OptionController);
 	
-	    _Controller.call(this, object, property);
+	    var _this2 = _possibleConstructorReturn(this, _Controller.call(this, object, property));
 	
 	    var options = opts;
 	
-	    var _this = this;
+	    var _this = _this2;
 	
 	    /**
 	     * The drop down menu
 	     * @ignore
 	     */
-	    this.__select = document.createElement('select');
+	    _this2.__select = document.createElement('select');
 	
-	    if (_utilsCommon2['default'].isArray(options)) {
+	    if (_common2.default.isArray(options)) {
 	      (function () {
 	        var map = {};
-	        _utilsCommon2['default'].each(options, function (element) {
+	        _common2.default.each(options, function (element) {
 	          map[element] = element;
 	        });
 	        options = map;
 	      })();
 	    }
 	
-	    _utilsCommon2['default'].each(options, function (value, key) {
+	    _common2.default.each(options, function (value, key) {
 	      var opt = document.createElement('option');
 	      opt.innerHTML = key;
 	      opt.setAttribute('value', value);
@@ -1484,14 +1603,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    });
 	
 	    // Acknowledge original value
-	    this.updateDisplay();
+	    _this2.updateDisplay();
 	
-	    _domDom2['default'].bind(this.__select, 'change', function () {
+	    _dom2.default.bind(_this2.__select, 'change', function () {
 	      var desiredValue = this.options[this.selectedIndex].value;
 	      _this.setValue(desiredValue);
 	    });
 	
-	    this.domElement.appendChild(this.__select);
+	    _this2.domElement.appendChild(_this2.__select);
+	    return _this2;
 	  }
 	
 	  OptionController.prototype.setValue = function setValue(v) {
@@ -1504,50 +1624,50 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	
 	  OptionController.prototype.updateDisplay = function updateDisplay() {
+	    if (_dom2.default.isActive(this.__select)) return this; // prevent number from updating if user is trying to manually update
 	    this.__select.value = this.getValue();
 	    return _Controller.prototype.updateDisplay.call(this);
 	  };
 	
 	  return OptionController;
-	})(_Controller3['default']);
+	}(_Controller3.default);
 	
-	exports['default'] = OptionController;
-	module.exports = exports['default'];
+	exports.default = OptionController;
 
 /***/ },
 /* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
 	'use strict';
 	
 	exports.__esModule = true;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _Controller2 = __webpack_require__(7);
 	
 	var _Controller3 = _interopRequireDefault(_Controller2);
 	
-	var _domDom = __webpack_require__(9);
+	var _dom = __webpack_require__(9);
 	
-	var _domDom2 = _interopRequireDefault(_domDom);
+	var _dom2 = _interopRequireDefault(_dom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * dat-gui JavaScript Controller Library
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://code.google.com/p/dat-gui
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2011 Data Arts Team, Google Creative Lab
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://www.apache.org/licenses/LICENSE-2.0
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 	
 	/**
 	 * @class Provides a text input to alter the string property of an object.
@@ -1559,28 +1679,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @member dat.controllers
 	 */
-	
-	var StringController = (function (_Controller) {
+	var StringController = function (_Controller) {
 	  _inherits(StringController, _Controller);
 	
 	  function StringController(object, property) {
 	    _classCallCheck(this, StringController);
 	
-	    _Controller.call(this, object, property);
+	    var _this2 = _possibleConstructorReturn(this, _Controller.call(this, object, property));
 	
-	    var _this = this;
-	
-	    this.__input = document.createElement('input');
-	    this.__input.setAttribute('type', 'text');
-	
-	    _domDom2['default'].bind(this.__input, 'keyup', onChange);
-	    _domDom2['default'].bind(this.__input, 'change', onChange);
-	    _domDom2['default'].bind(this.__input, 'blur', onBlur);
-	    _domDom2['default'].bind(this.__input, 'keydown', function (e) {
-	      if (e.keyCode === 13) {
-	        this.blur();
-	      }
-	    });
+	    var _this = _this2;
 	
 	    function onChange() {
 	      _this.setValue(_this.__input.value);
@@ -1592,60 +1699,72 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	
-	    this.updateDisplay();
+	    _this2.__input = document.createElement('input');
+	    _this2.__input.setAttribute('type', 'text');
 	
-	    this.domElement.appendChild(this.__input);
+	    _dom2.default.bind(_this2.__input, 'keyup', onChange);
+	    _dom2.default.bind(_this2.__input, 'change', onChange);
+	    _dom2.default.bind(_this2.__input, 'blur', onBlur);
+	    _dom2.default.bind(_this2.__input, 'keydown', function (e) {
+	      if (e.keyCode === 13) {
+	        this.blur();
+	      }
+	    });
+	
+	    _this2.updateDisplay();
+	
+	    _this2.domElement.appendChild(_this2.__input);
+	    return _this2;
 	  }
 	
 	  StringController.prototype.updateDisplay = function updateDisplay() {
 	    // Stops the caret from moving on account of:
 	    // keyup -> setValue -> updateDisplay
-	    if (!_domDom2['default'].isActive(this.__input)) {
+	    if (!_dom2.default.isActive(this.__input)) {
 	      this.__input.value = this.getValue();
 	    }
 	    return _Controller.prototype.updateDisplay.call(this);
 	  };
 	
 	  return StringController;
-	})(_Controller3['default']);
+	}(_Controller3.default);
 	
-	exports['default'] = StringController;
-	module.exports = exports['default'];
+	exports.default = StringController;
 
 /***/ },
 /* 12 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
 	'use strict';
 	
 	exports.__esModule = true;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _Controller2 = __webpack_require__(7);
 	
 	var _Controller3 = _interopRequireDefault(_Controller2);
 	
-	var _utilsCommon = __webpack_require__(5);
+	var _common = __webpack_require__(5);
 	
-	var _utilsCommon2 = _interopRequireDefault(_utilsCommon);
+	var _common2 = _interopRequireDefault(_common);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * dat-gui JavaScript Controller Library
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://code.google.com/p/dat-gui
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2011 Data Arts Team, Google Creative Lab
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://www.apache.org/licenses/LICENSE-2.0
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 	
 	function numDecimals(x) {
 	  var _x = x.toString();
@@ -1671,32 +1790,33 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @member dat.controllers
 	 */
 	
-	var NumberController = (function (_Controller) {
+	var NumberController = function (_Controller) {
 	  _inherits(NumberController, _Controller);
 	
 	  function NumberController(object, property, params) {
 	    _classCallCheck(this, NumberController);
 	
-	    _Controller.call(this, object, property);
+	    var _this = _possibleConstructorReturn(this, _Controller.call(this, object, property));
 	
 	    var _params = params || {};
 	
-	    this.__min = _params.min;
-	    this.__max = _params.max;
-	    this.__step = _params.step;
+	    _this.__min = _params.min;
+	    _this.__max = _params.max;
+	    _this.__step = _params.step;
 	
-	    if (_utilsCommon2['default'].isUndefined(this.__step)) {
-	      if (this.initialValue === 0) {
-	        this.__impliedStep = 1; // What are we, psychics?
+	    if (_common2.default.isUndefined(_this.__step)) {
+	      if (_this.initialValue === 0) {
+	        _this.__impliedStep = 1; // What are we, psychics?
 	      } else {
-	          // Hey Doug, check this out.
-	          this.__impliedStep = Math.pow(10, Math.floor(Math.log(Math.abs(this.initialValue)) / Math.LN10)) / 10;
-	        }
+	        // Hey Doug, check this out.
+	        _this.__impliedStep = Math.pow(10, Math.floor(Math.log(Math.abs(_this.initialValue)) / Math.LN10)) / 10;
+	      }
 	    } else {
-	      this.__impliedStep = this.__step;
+	      _this.__impliedStep = _this.__step;
 	    }
 	
-	    this.__precision = numDecimals(this.__impliedStep);
+	    _this.__precision = numDecimals(_this.__impliedStep);
+	    return _this;
 	  }
 	
 	  NumberController.prototype.setValue = function setValue(v) {
@@ -1723,6 +1843,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @returns {dat.controllers.NumberController} this
 	   */
 	
+	
 	  NumberController.prototype.min = function min(v) {
 	    this.__min = v;
 	    return this;
@@ -1735,6 +1856,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * <code>object[property]</code>
 	   * @returns {dat.controllers.NumberController} this
 	   */
+	
 	
 	  NumberController.prototype.max = function max(v) {
 	    this.__max = v;
@@ -1752,6 +1874,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @returns {dat.controllers.NumberController} this
 	   */
 	
+	
 	  NumberController.prototype.step = function step(v) {
 	    this.__step = v;
 	    this.__impliedStep = v;
@@ -1760,49 +1883,48 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	
 	  return NumberController;
-	})(_Controller3['default']);
+	}(_Controller3.default);
 	
-	exports['default'] = NumberController;
-	module.exports = exports['default'];
+	exports.default = NumberController;
 
 /***/ },
 /* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
 	'use strict';
 	
 	exports.__esModule = true;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _NumberController2 = __webpack_require__(12);
 	
 	var _NumberController3 = _interopRequireDefault(_NumberController2);
 	
-	var _domDom = __webpack_require__(9);
+	var _dom = __webpack_require__(9);
 	
-	var _domDom2 = _interopRequireDefault(_domDom);
+	var _dom2 = _interopRequireDefault(_dom);
 	
-	var _utilsCommon = __webpack_require__(5);
+	var _common = __webpack_require__(5);
 	
-	var _utilsCommon2 = _interopRequireDefault(_utilsCommon);
+	var _common2 = _interopRequireDefault(_common);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * dat-gui JavaScript Controller Library
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://code.google.com/p/dat-gui
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2011 Data Arts Team, Google Creative Lab
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://www.apache.org/licenses/LICENSE-2.0
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 	
 	function roundToDecimal(value, decimals) {
 	  var tenTo = Math.pow(10, decimals);
@@ -1826,59 +1948,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @member dat.controllers
 	 */
 	
-	var NumberControllerBox = (function (_NumberController) {
+	var NumberControllerBox = function (_NumberController) {
 	  _inherits(NumberControllerBox, _NumberController);
 	
 	  function NumberControllerBox(object, property, params) {
 	    _classCallCheck(this, NumberControllerBox);
 	
-	    _NumberController.call(this, object, property, params);
+	    var _this2 = _possibleConstructorReturn(this, _NumberController.call(this, object, property, params));
 	
-	    this.__truncationSuspended = false;
+	    _this2.__truncationSuspended = false;
 	
-	    var _this = this;
+	    var _this = _this2;
 	
 	    /**
 	     * {Number} Previous mouse y position
 	     * @ignore
 	     */
-	    var prevY = undefined;
-	
-	    this.__input = document.createElement('input');
-	    this.__input.setAttribute('type', 'text');
-	
-	    // Makes it so manually specified values are not truncated.
-	
-	    _domDom2['default'].bind(this.__input, 'change', onChange);
-	    _domDom2['default'].bind(this.__input, 'blur', onBlur);
-	    _domDom2['default'].bind(this.__input, 'mousedown', onMouseDown);
-	    _domDom2['default'].bind(this.__input, 'keydown', function (e) {
-	      // When pressing entire, you can be as precise as you want.
-	      if (e.keyCode === 13) {
-	        _this.__truncationSuspended = true;
-	        this.blur();
-	        _this.__truncationSuspended = false;
-	      }
-	    });
+	    var prevY = void 0;
 	
 	    function onChange() {
 	      var attempted = parseFloat(_this.__input.value);
-	      if (!_utilsCommon2['default'].isNaN(attempted)) {
+	      if (!_common2.default.isNaN(attempted)) {
 	        _this.setValue(attempted);
 	      }
 	    }
 	
-	    function onBlur() {
-	      onChange();
+	    function onFinish() {
 	      if (_this.__onFinishChange) {
 	        _this.__onFinishChange.call(_this, _this.getValue());
 	      }
 	    }
 	
-	    function onMouseDown(e) {
-	      _domDom2['default'].bind(window, 'mousemove', onMouseDrag);
-	      _domDom2['default'].bind(window, 'mouseup', onMouseUp);
-	      prevY = e.clientY;
+	    function onBlur() {
+	      onFinish();
 	    }
 	
 	    function onMouseDrag(e) {
@@ -1889,13 +1991,39 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	
 	    function onMouseUp() {
-	      _domDom2['default'].unbind(window, 'mousemove', onMouseDrag);
-	      _domDom2['default'].unbind(window, 'mouseup', onMouseUp);
+	      _dom2.default.unbind(window, 'mousemove', onMouseDrag);
+	      _dom2.default.unbind(window, 'mouseup', onMouseUp);
+	      onFinish();
 	    }
 	
-	    this.updateDisplay();
+	    function onMouseDown(e) {
+	      _dom2.default.bind(window, 'mousemove', onMouseDrag);
+	      _dom2.default.bind(window, 'mouseup', onMouseUp);
+	      prevY = e.clientY;
+	    }
 	
-	    this.domElement.appendChild(this.__input);
+	    _this2.__input = document.createElement('input');
+	    _this2.__input.setAttribute('type', 'text');
+	
+	    // Makes it so manually specified values are not truncated.
+	
+	    _dom2.default.bind(_this2.__input, 'change', onChange);
+	    _dom2.default.bind(_this2.__input, 'blur', onBlur);
+	    _dom2.default.bind(_this2.__input, 'mousedown', onMouseDown);
+	    _dom2.default.bind(_this2.__input, 'keydown', function (e) {
+	      // When pressing enter, you can be as precise as you want.
+	      if (e.keyCode === 13) {
+	        _this.__truncationSuspended = true;
+	        this.blur();
+	        _this.__truncationSuspended = false;
+	        onFinish();
+	      }
+	    });
+	
+	    _this2.updateDisplay();
+	
+	    _this2.domElement.appendChild(_this2.__input);
+	    return _this2;
 	  }
 	
 	  NumberControllerBox.prototype.updateDisplay = function updateDisplay() {
@@ -1904,53 +2032,44 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	
 	  return NumberControllerBox;
-	})(_NumberController3['default']);
+	}(_NumberController3.default);
 	
-	exports['default'] = NumberControllerBox;
-	module.exports = exports['default'];
+	exports.default = NumberControllerBox;
 
 /***/ },
 /* 14 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
 	'use strict';
 	
 	exports.__esModule = true;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _NumberController2 = __webpack_require__(12);
 	
 	var _NumberController3 = _interopRequireDefault(_NumberController2);
 	
-	var _domDom = __webpack_require__(9);
+	var _dom = __webpack_require__(9);
 	
-	var _domDom2 = _interopRequireDefault(_domDom);
+	var _dom2 = _interopRequireDefault(_dom);
 	
-	var _utilsCss = __webpack_require__(15);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var _utilsCss2 = _interopRequireDefault(_utilsCss);
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 	
-	var _styleCssSassNumberControllerSliderScss = __webpack_require__(16);
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 	
-	var _styleCssSassNumberControllerSliderScss2 = _interopRequireDefault(_styleCssSassNumberControllerSliderScss);
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * dat-gui JavaScript Controller Library
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://code.google.com/p/dat-gui
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2011 Data Arts Team, Google Creative Lab
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://www.apache.org/licenses/LICENSE-2.0
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 	
 	function map(v, i1, i2, o1, o2) {
 	  return o1 + (o2 - o1) * ((v - i1) / (i2 - i1));
@@ -1975,27 +2094,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * @member dat.controllers
 	 */
 	
-	var NumberControllerSlider = (function (_NumberController) {
+	var NumberControllerSlider = function (_NumberController) {
 	  _inherits(NumberControllerSlider, _NumberController);
 	
 	  function NumberControllerSlider(object, property, min, max, step) {
 	    _classCallCheck(this, NumberControllerSlider);
 	
-	    _NumberController.call(this, object, property, { min: min, max: max, step: step });
+	    var _this2 = _possibleConstructorReturn(this, _NumberController.call(this, object, property, { min: min, max: max, step: step }));
 	
-	    var _this = this;
+	    var _this = _this2;
 	
-	    this.__background = document.createElement('div');
-	    this.__foreground = document.createElement('div');
+	    _this2.__background = document.createElement('div');
+	    _this2.__foreground = document.createElement('div');
 	
-	    _domDom2['default'].bind(this.__background, 'mousedown', onMouseDown);
+	    _dom2.default.bind(_this2.__background, 'mousedown', onMouseDown);
 	
-	    _domDom2['default'].addClass(this.__background, 'slider');
-	    _domDom2['default'].addClass(this.__foreground, 'slider-fg');
+	    _dom2.default.addClass(_this2.__background, 'slider');
+	    _dom2.default.addClass(_this2.__foreground, 'slider-fg');
 	
 	    function onMouseDown(e) {
-	      _domDom2['default'].bind(window, 'mousemove', onMouseDrag);
-	      _domDom2['default'].bind(window, 'mouseup', onMouseUp);
+	      document.activeElement.blur();
+	
+	      _dom2.default.bind(window, 'mousemove', onMouseDrag);
+	      _dom2.default.bind(window, 'mouseup', onMouseUp);
 	
 	      onMouseDrag(e);
 	    }
@@ -2003,31 +2124,27 @@ return /******/ (function(modules) { // webpackBootstrap
 	    function onMouseDrag(e) {
 	      e.preventDefault();
 	
-	      var offset = _domDom2['default'].getOffset(_this.__background);
-	      var width = _domDom2['default'].getWidth(_this.__background);
+	      var bgRect = _this.__background.getBoundingClientRect();
 	
-	      _this.setValue(map(e.clientX, offset.left, offset.left + width, _this.__min, _this.__max));
+	      _this.setValue(map(e.clientX, bgRect.left, bgRect.right, _this.__min, _this.__max));
 	
 	      return false;
 	    }
 	
 	    function onMouseUp() {
-	      _domDom2['default'].unbind(window, 'mousemove', onMouseDrag);
-	      _domDom2['default'].unbind(window, 'mouseup', onMouseUp);
+	      _dom2.default.unbind(window, 'mousemove', onMouseDrag);
+	      _dom2.default.unbind(window, 'mouseup', onMouseUp);
 	      if (_this.__onFinishChange) {
 	        _this.__onFinishChange.call(_this, _this.getValue());
 	      }
 	    }
 	
-	    this.updateDisplay();
+	    _this2.updateDisplay();
 	
-	    this.__background.appendChild(this.__foreground);
-	    this.domElement.appendChild(this.__background);
+	    _this2.__background.appendChild(_this2.__foreground);
+	    _this2.domElement.appendChild(_this2.__background);
+	    return _this2;
 	  }
-	
-	  /**
-	   * Injects default stylesheet for slider elements.
-	   */
 	
 	  NumberControllerSlider.prototype.updateDisplay = function updateDisplay() {
 	    var pct = (this.getValue() - this.__min) / (this.__max - this.__min);
@@ -2036,408 +2153,44 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	
 	  return NumberControllerSlider;
-	})(_NumberController3['default']);
+	}(_NumberController3.default);
 	
-	NumberControllerSlider.useDefaultStyles = function () {
-	  _utilsCss2['default'].inject(_styleCssSassNumberControllerSliderScss2['default']);
-	};
-	
-	exports['default'] = NumberControllerSlider;
-	module.exports = exports['default'];
+	exports.default = NumberControllerSlider;
 
 /***/ },
 /* 15 */
-/***/ function(module, exports) {
-
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
-	'use strict';
-	
-	module.exports = {
-	  load: function load(url, indoc) {
-	    var doc = indoc || document;
-	    var link = doc.createElement('link');
-	    link.type = 'text/css';
-	    link.rel = 'stylesheet';
-	    link.href = url;
-	    doc.getElementsByTagName('head')[0].appendChild(link);
-	  },
-	
-	  inject: function inject(css, indoc) {
-	    var doc = indoc || document;
-	    var injected = document.createElement('style');
-	    injected.type = 'text/css';
-	    injected.innerHTML = css;
-	    doc.getElementsByTagName('head')[0].appendChild(injected);
-	  }
-	};
-
-/***/ },
-/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	// style-loader: Adds some css to the DOM by adding a <style> tag
-	
-	// load the styles
-	var content = __webpack_require__(17);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(19)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./NumberControllerSlider.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./NumberControllerSlider.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 17 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(18)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, "/**\n * dat-gui JavaScript Controller Library\n * http://code.google.com/p/dat-gui\n *\n * Copyright 2011 Data Arts Team, Google Creative Lab\n *\n * Licensed under the Apache License, Version 2.0 (the \"License\");\n * you may not use this file except in compliance with the License.\n * You may obtain a copy of the License at\n *\n * http://www.apache.org/licenses/LICENSE-2.0\n */\n.slider {\n  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);\n  height: 1em;\n  border-radius: 1em;\n  background-color: #eee;\n  padding: 0 0.5em;\n  overflow: hidden; }\n\n.slider-fg {\n  padding: 1px 0 2px 0;\n  background-color: #aaa;\n  height: 1em;\n  margin-left: -0.5em;\n  padding-right: 0.5em;\n  border-radius: 1em 0 0 1em; }\n\n.slider-fg:after {\n  display: inline-block;\n  border-radius: 1em;\n  background-color: #fff;\n  border: 1px solid #aaa;\n  content: '';\n  float: right;\n  margin-right: -1em;\n  margin-top: -1px;\n  height: 0.9em;\n  width: 0.9em; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 18 */
-/***/ function(module, exports) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	// css base code, injected by the css-loader
-	module.exports = function() {
-		var list = [];
-	
-		// return the list of modules as css string
-		list.toString = function toString() {
-			var result = [];
-			for(var i = 0; i < this.length; i++) {
-				var item = this[i];
-				if(item[2]) {
-					result.push("@media " + item[2] + "{" + item[1] + "}");
-				} else {
-					result.push(item[1]);
-				}
-			}
-			return result.join("");
-		};
-	
-		// import a list of modules into the list
-		list.i = function(modules, mediaQuery) {
-			if(typeof modules === "string")
-				modules = [[null, modules, ""]];
-			var alreadyImportedModules = {};
-			for(var i = 0; i < this.length; i++) {
-				var id = this[i][0];
-				if(typeof id === "number")
-					alreadyImportedModules[id] = true;
-			}
-			for(i = 0; i < modules.length; i++) {
-				var item = modules[i];
-				// skip already imported module
-				// this implementation is not 100% perfect for weird media query combinations
-				//  when a module is imported multiple times with different media queries.
-				//  I hope this will never occur (Hey this way we have smaller bundles)
-				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
-					if(mediaQuery && !item[2]) {
-						item[2] = mediaQuery;
-					} else if(mediaQuery) {
-						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
-					}
-					list.push(item);
-				}
-			}
-		};
-		return list;
-	};
-
-
-/***/ },
-/* 19 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/*
-		MIT License http://www.opensource.org/licenses/mit-license.php
-		Author Tobias Koppers @sokra
-	*/
-	var stylesInDom = {},
-		memoize = function(fn) {
-			var memo;
-			return function () {
-				if (typeof memo === "undefined") memo = fn.apply(this, arguments);
-				return memo;
-			};
-		},
-		isOldIE = memoize(function() {
-			return /msie [6-9]\b/.test(window.navigator.userAgent.toLowerCase());
-		}),
-		getHeadElement = memoize(function () {
-			return document.head || document.getElementsByTagName("head")[0];
-		}),
-		singletonElement = null,
-		singletonCounter = 0;
-	
-	module.exports = function(list, options) {
-		if(false) {
-			if(typeof document !== "object") throw new Error("The style-loader cannot be used in a non-browser environment");
-		}
-	
-		options = options || {};
-		// Force single-tag solution on IE6-9, which has a hard limit on the # of <style>
-		// tags it will allow on a page
-		if (typeof options.singleton === "undefined") options.singleton = isOldIE();
-	
-		var styles = listToStyles(list);
-		addStylesToDom(styles, options);
-	
-		return function update(newList) {
-			var mayRemove = [];
-			for(var i = 0; i < styles.length; i++) {
-				var item = styles[i];
-				var domStyle = stylesInDom[item.id];
-				domStyle.refs--;
-				mayRemove.push(domStyle);
-			}
-			if(newList) {
-				var newStyles = listToStyles(newList);
-				addStylesToDom(newStyles, options);
-			}
-			for(var i = 0; i < mayRemove.length; i++) {
-				var domStyle = mayRemove[i];
-				if(domStyle.refs === 0) {
-					for(var j = 0; j < domStyle.parts.length; j++)
-						domStyle.parts[j]();
-					delete stylesInDom[domStyle.id];
-				}
-			}
-		};
-	}
-	
-	function addStylesToDom(styles, options) {
-		for(var i = 0; i < styles.length; i++) {
-			var item = styles[i];
-			var domStyle = stylesInDom[item.id];
-			if(domStyle) {
-				domStyle.refs++;
-				for(var j = 0; j < domStyle.parts.length; j++) {
-					domStyle.parts[j](item.parts[j]);
-				}
-				for(; j < item.parts.length; j++) {
-					domStyle.parts.push(addStyle(item.parts[j], options));
-				}
-			} else {
-				var parts = [];
-				for(var j = 0; j < item.parts.length; j++) {
-					parts.push(addStyle(item.parts[j], options));
-				}
-				stylesInDom[item.id] = {id: item.id, refs: 1, parts: parts};
-			}
-		}
-	}
-	
-	function listToStyles(list) {
-		var styles = [];
-		var newStyles = {};
-		for(var i = 0; i < list.length; i++) {
-			var item = list[i];
-			var id = item[0];
-			var css = item[1];
-			var media = item[2];
-			var sourceMap = item[3];
-			var part = {css: css, media: media, sourceMap: sourceMap};
-			if(!newStyles[id])
-				styles.push(newStyles[id] = {id: id, parts: [part]});
-			else
-				newStyles[id].parts.push(part);
-		}
-		return styles;
-	}
-	
-	function createStyleElement() {
-		var styleElement = document.createElement("style");
-		var head = getHeadElement();
-		styleElement.type = "text/css";
-		head.appendChild(styleElement);
-		return styleElement;
-	}
-	
-	function createLinkElement() {
-		var linkElement = document.createElement("link");
-		var head = getHeadElement();
-		linkElement.rel = "stylesheet";
-		head.appendChild(linkElement);
-		return linkElement;
-	}
-	
-	function addStyle(obj, options) {
-		var styleElement, update, remove;
-	
-		if (options.singleton) {
-			var styleIndex = singletonCounter++;
-			styleElement = singletonElement || (singletonElement = createStyleElement());
-			update = applyToSingletonTag.bind(null, styleElement, styleIndex, false);
-			remove = applyToSingletonTag.bind(null, styleElement, styleIndex, true);
-		} else if(obj.sourceMap &&
-			typeof URL === "function" &&
-			typeof URL.createObjectURL === "function" &&
-			typeof URL.revokeObjectURL === "function" &&
-			typeof Blob === "function" &&
-			typeof btoa === "function") {
-			styleElement = createLinkElement();
-			update = updateLink.bind(null, styleElement);
-			remove = function() {
-				styleElement.parentNode.removeChild(styleElement);
-				if(styleElement.href)
-					URL.revokeObjectURL(styleElement.href);
-			};
-		} else {
-			styleElement = createStyleElement();
-			update = applyToTag.bind(null, styleElement);
-			remove = function() {
-				styleElement.parentNode.removeChild(styleElement);
-			};
-		}
-	
-		update(obj);
-	
-		return function updateStyle(newObj) {
-			if(newObj) {
-				if(newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap)
-					return;
-				update(obj = newObj);
-			} else {
-				remove();
-			}
-		};
-	}
-	
-	var replaceText = (function () {
-		var textStore = [];
-	
-		return function (index, replacement) {
-			textStore[index] = replacement;
-			return textStore.filter(Boolean).join('\n');
-		};
-	})();
-	
-	function applyToSingletonTag(styleElement, index, remove, obj) {
-		var css = remove ? "" : obj.css;
-	
-		if (styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = replaceText(index, css);
-		} else {
-			var cssNode = document.createTextNode(css);
-			var childNodes = styleElement.childNodes;
-			if (childNodes[index]) styleElement.removeChild(childNodes[index]);
-			if (childNodes.length) {
-				styleElement.insertBefore(cssNode, childNodes[index]);
-			} else {
-				styleElement.appendChild(cssNode);
-			}
-		}
-	}
-	
-	function applyToTag(styleElement, obj) {
-		var css = obj.css;
-		var media = obj.media;
-		var sourceMap = obj.sourceMap;
-	
-		if(media) {
-			styleElement.setAttribute("media", media)
-		}
-	
-		if(styleElement.styleSheet) {
-			styleElement.styleSheet.cssText = css;
-		} else {
-			while(styleElement.firstChild) {
-				styleElement.removeChild(styleElement.firstChild);
-			}
-			styleElement.appendChild(document.createTextNode(css));
-		}
-	}
-	
-	function updateLink(linkElement, obj) {
-		var css = obj.css;
-		var media = obj.media;
-		var sourceMap = obj.sourceMap;
-	
-		if(sourceMap) {
-			// http://stackoverflow.com/a/26603875
-			css += "\n/*# sourceMappingURL=data:application/json;base64," + btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))) + " */";
-		}
-	
-		var blob = new Blob([css], { type: "text/css" });
-	
-		var oldSrc = linkElement.href;
-	
-		linkElement.href = URL.createObjectURL(blob);
-	
-		if(oldSrc)
-			URL.revokeObjectURL(oldSrc);
-	}
-
-
-/***/ },
-/* 20 */
-/***/ function(module, exports, __webpack_require__) {
-
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
 	'use strict';
 	
 	exports.__esModule = true;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _Controller2 = __webpack_require__(7);
 	
 	var _Controller3 = _interopRequireDefault(_Controller2);
 	
-	var _domDom = __webpack_require__(9);
+	var _dom = __webpack_require__(9);
 	
-	var _domDom2 = _interopRequireDefault(_domDom);
+	var _dom2 = _interopRequireDefault(_dom);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * dat-gui JavaScript Controller Library
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://code.google.com/p/dat-gui
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2011 Data Arts Team, Google Creative Lab
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://www.apache.org/licenses/LICENSE-2.0
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
 	
 	/**
 	 * @class Provides a GUI interface to fire a specified method, a property of an object.
@@ -2449,29 +2202,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	 *
 	 * @member dat.controllers
 	 */
-	
-	var FunctionController = (function (_Controller) {
+	var FunctionController = function (_Controller) {
 	  _inherits(FunctionController, _Controller);
 	
 	  function FunctionController(object, property, text) {
 	    _classCallCheck(this, FunctionController);
 	
-	    _Controller.call(this, object, property);
+	    var _this2 = _possibleConstructorReturn(this, _Controller.call(this, object, property));
 	
-	    var _this = this;
+	    var _this = _this2;
 	
-	    this.__button = document.createElement('div');
-	    this.__button.innerHTML = text === undefined ? 'Fire' : text;
+	    _this2.__button = document.createElement('div');
+	    _this2.__button.innerHTML = text === undefined ? 'Fire' : text;
 	
-	    _domDom2['default'].bind(this.__button, 'click', function (e) {
+	    _dom2.default.bind(_this2.__button, 'click', function (e) {
 	      e.preventDefault();
 	      _this.fire();
 	      return false;
 	    });
 	
-	    _domDom2['default'].addClass(this.__button, 'button');
+	    _dom2.default.addClass(_this2.__button, 'button');
 	
-	    this.domElement.appendChild(this.__button);
+	    _this2.domElement.appendChild(_this2.__button);
+	    return _this2;
 	  }
 	
 	  FunctionController.prototype.fire = function fire() {
@@ -2485,113 +2238,112 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	
 	  return FunctionController;
-	})(_Controller3['default']);
+	}(_Controller3.default);
 	
-	exports['default'] = FunctionController;
-	module.exports = exports['default'];
+	exports.default = FunctionController;
 
 /***/ },
-/* 21 */
+/* 16 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
 	'use strict';
 	
 	exports.__esModule = true;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
-	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
-	
-	function _inherits(subClass, superClass) { if (typeof superClass !== 'function' && superClass !== null) { throw new TypeError('Super expression must either be null or a function, not ' + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 	
 	var _Controller2 = __webpack_require__(7);
 	
 	var _Controller3 = _interopRequireDefault(_Controller2);
 	
-	var _domDom = __webpack_require__(9);
+	var _dom = __webpack_require__(9);
 	
-	var _domDom2 = _interopRequireDefault(_domDom);
+	var _dom2 = _interopRequireDefault(_dom);
 	
-	var _colorColor = __webpack_require__(2);
+	var _Color = __webpack_require__(2);
 	
-	var _colorColor2 = _interopRequireDefault(_colorColor);
+	var _Color2 = _interopRequireDefault(_Color);
 	
-	var _colorInterpret = __webpack_require__(3);
+	var _interpret = __webpack_require__(3);
 	
-	var _colorInterpret2 = _interopRequireDefault(_colorInterpret);
+	var _interpret2 = _interopRequireDefault(_interpret);
 	
-	var _utilsCommon = __webpack_require__(5);
+	var _common = __webpack_require__(5);
 	
-	var _utilsCommon2 = _interopRequireDefault(_utilsCommon);
+	var _common2 = _interopRequireDefault(_common);
 	
-	var ColorController = (function (_Controller) {
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+	
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+	
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } /**
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * dat-gui JavaScript Controller Library
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://code.google.com/p/dat-gui
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Copyright 2011 Data Arts Team, Google Creative Lab
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * Licensed under the Apache License, Version 2.0 (the "License");
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * you may not use this file except in compliance with the License.
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * You may obtain a copy of the License at
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                *
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                * http://www.apache.org/licenses/LICENSE-2.0
+	                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                */
+	
+	var ColorController = function (_Controller) {
 	  _inherits(ColorController, _Controller);
 	
 	  function ColorController(object, property) {
 	    _classCallCheck(this, ColorController);
 	
-	    _Controller.call(this, object, property);
+	    var _this2 = _possibleConstructorReturn(this, _Controller.call(this, object, property));
 	
-	    this.__color = new _colorColor2['default'](this.getValue());
-	    this.__temp = new _colorColor2['default'](0);
+	    _this2.__color = new _Color2.default(_this2.getValue());
+	    _this2.__temp = new _Color2.default(0);
 	
-	    var _this = this;
+	    var _this = _this2;
 	
-	    this.domElement = document.createElement('div');
+	    _this2.domElement = document.createElement('div');
 	
-	    _domDom2['default'].makeSelectable(this.domElement, false);
+	    _dom2.default.makeSelectable(_this2.domElement, false);
 	
-	    this.__selector = document.createElement('div');
-	    this.__selector.className = 'selector';
+	    _this2.__selector = document.createElement('div');
+	    _this2.__selector.className = 'selector';
 	
-	    this.__saturation_field = document.createElement('div');
-	    this.__saturation_field.className = 'saturation-field';
+	    _this2.__saturation_field = document.createElement('div');
+	    _this2.__saturation_field.className = 'saturation-field';
 	
-	    this.__field_knob = document.createElement('div');
-	    this.__field_knob.className = 'field-knob';
-	    this.__field_knob_border = '2px solid ';
+	    _this2.__field_knob = document.createElement('div');
+	    _this2.__field_knob.className = 'field-knob';
+	    _this2.__field_knob_border = '2px solid ';
 	
-	    this.__hue_knob = document.createElement('div');
-	    this.__hue_knob.className = 'hue-knob';
+	    _this2.__hue_knob = document.createElement('div');
+	    _this2.__hue_knob.className = 'hue-knob';
 	
-	    this.__hue_field = document.createElement('div');
-	    this.__hue_field.className = 'hue-field';
+	    _this2.__hue_field = document.createElement('div');
+	    _this2.__hue_field.className = 'hue-field';
 	
-	    this.__input = document.createElement('input');
-	    this.__input.type = 'text';
-	    this.__input_textShadow = '0 1px 1px ';
+	    _this2.__input = document.createElement('input');
+	    _this2.__input.type = 'text';
+	    _this2.__input_textShadow = '0 1px 1px ';
 	
-	    _domDom2['default'].bind(this.__input, 'keydown', function (e) {
+	    _dom2.default.bind(_this2.__input, 'keydown', function (e) {
 	      if (e.keyCode === 13) {
 	        // on enter
 	        onBlur.call(this);
 	      }
 	    });
 	
-	    _domDom2['default'].bind(this.__input, 'blur', onBlur);
+	    _dom2.default.bind(_this2.__input, 'blur', onBlur);
 	
-	    _domDom2['default'].bind(this.__selector, 'mousedown', function () /* e */{
-	      _domDom2['default'].addClass(this, 'drag').bind(window, 'mouseup', function () /* e */{
-	        _domDom2['default'].removeClass(_this.__selector, 'drag');
+	    _dom2.default.bind(_this2.__selector, 'mousedown', function () /* e */{
+	      _dom2.default.addClass(this, 'drag').bind(window, 'mouseup', function () /* e */{
+	        _dom2.default.removeClass(_this.__selector, 'drag');
 	      });
 	    });
 	
 	    var valueField = document.createElement('div');
 	
-	    _utilsCommon2['default'].extend(this.__selector.style, {
+	    _common2.default.extend(_this2.__selector.style, {
 	      width: '122px',
 	      height: '102px',
 	      padding: '3px',
@@ -2599,17 +2351,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	      boxShadow: '0px 1px 3px rgba(0,0,0,0.3)'
 	    });
 	
-	    _utilsCommon2['default'].extend(this.__field_knob.style, {
+	    _common2.default.extend(_this2.__field_knob.style, {
 	      position: 'absolute',
 	      width: '12px',
 	      height: '12px',
-	      border: this.__field_knob_border + (this.__color.v < 0.5 ? '#fff' : '#000'),
+	      border: _this2.__field_knob_border + (_this2.__color.v < 0.5 ? '#fff' : '#000'),
 	      boxShadow: '0px 1px 3px rgba(0,0,0,0.5)',
 	      borderRadius: '12px',
 	      zIndex: 1
 	    });
 	
-	    _utilsCommon2['default'].extend(this.__hue_knob.style, {
+	    _common2.default.extend(_this2.__hue_knob.style, {
 	      position: 'absolute',
 	      width: '15px',
 	      height: '2px',
@@ -2617,7 +2369,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      zIndex: 1
 	    });
 	
-	    _utilsCommon2['default'].extend(this.__saturation_field.style, {
+	    _common2.default.extend(_this2.__saturation_field.style, {
 	      width: '100px',
 	      height: '100px',
 	      border: '1px solid #555',
@@ -2626,7 +2378,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      cursor: 'pointer'
 	    });
 	
-	    _utilsCommon2['default'].extend(valueField.style, {
+	    _common2.default.extend(valueField.style, {
 	      width: '100%',
 	      height: '100%',
 	      background: 'none'
@@ -2634,17 +2386,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    linearGradient(valueField, 'top', 'rgba(0,0,0,0)', '#000');
 	
-	    _utilsCommon2['default'].extend(this.__hue_field.style, {
+	    _common2.default.extend(_this2.__hue_field.style, {
 	      width: '15px',
 	      height: '100px',
-	      display: 'inline-block',
 	      border: '1px solid #555',
-	      cursor: 'ns-resize'
+	      cursor: 'ns-resize',
+	      position: 'absolute',
+	      top: '3px',
+	      right: '3px'
 	    });
 	
-	    hueGradient(this.__hue_field);
+	    hueGradient(_this2.__hue_field);
 	
-	    _utilsCommon2['default'].extend(this.__input.style, {
+	    _common2.default.extend(_this2.__input.style, {
 	      outline: 'none',
 	      //      width: '120px',
 	      textAlign: 'center',
@@ -2653,33 +2407,34 @@ return /******/ (function(modules) { // webpackBootstrap
 	      color: '#fff',
 	      border: 0,
 	      fontWeight: 'bold',
-	      textShadow: this.__input_textShadow + 'rgba(0,0,0,0.7)'
+	      textShadow: _this2.__input_textShadow + 'rgba(0,0,0,0.7)'
 	    });
 	
-	    _domDom2['default'].bind(this.__saturation_field, 'mousedown', fieldDown);
-	    _domDom2['default'].bind(this.__field_knob, 'mousedown', fieldDown);
+	    _dom2.default.bind(_this2.__saturation_field, 'mousedown', fieldDown);
+	    _dom2.default.bind(_this2.__field_knob, 'mousedown', fieldDown);
 	
-	    _domDom2['default'].bind(this.__hue_field, 'mousedown', function (e) {
+	    _dom2.default.bind(_this2.__hue_field, 'mousedown', function (e) {
 	      setH(e);
-	      _domDom2['default'].bind(window, 'mousemove', setH);
-	      _domDom2['default'].bind(window, 'mouseup', unbindH);
+	      _dom2.default.bind(window, 'mousemove', setH);
+	      _dom2.default.bind(window, 'mouseup', fieldUpH);
 	    });
 	
 	    function fieldDown(e) {
 	      setSV(e);
 	      // document.body.style.cursor = 'none';
-	      _domDom2['default'].bind(window, 'mousemove', setSV);
-	      _domDom2['default'].bind(window, 'mouseup', unbindSV);
+	      _dom2.default.bind(window, 'mousemove', setSV);
+	      _dom2.default.bind(window, 'mouseup', fieldUpSV);
 	    }
 	
-	    function unbindSV() {
-	      _domDom2['default'].unbind(window, 'mousemove', setSV);
-	      _domDom2['default'].unbind(window, 'mouseup', unbindSV);
+	    function fieldUpSV() {
+	      _dom2.default.unbind(window, 'mousemove', setSV);
+	      _dom2.default.unbind(window, 'mouseup', fieldUpSV);
 	      // document.body.style.cursor = 'default';
+	      onFinish();
 	    }
 	
 	    function onBlur() {
-	      var i = _colorInterpret2['default'](this.value);
+	      var i = (0, _interpret2.default)(this.value);
 	      if (i !== false) {
 	        _this.__color.__state = i;
 	        _this.setValue(_this.__color.toOriginal());
@@ -2688,29 +2443,35 @@ return /******/ (function(modules) { // webpackBootstrap
 	      }
 	    }
 	
-	    function unbindH() {
-	      _domDom2['default'].unbind(window, 'mousemove', setH);
-	      _domDom2['default'].unbind(window, 'mouseup', unbindH);
+	    function fieldUpH() {
+	      _dom2.default.unbind(window, 'mousemove', setH);
+	      _dom2.default.unbind(window, 'mouseup', fieldUpH);
+	      onFinish();
 	    }
 	
-	    this.__saturation_field.appendChild(valueField);
-	    this.__selector.appendChild(this.__field_knob);
-	    this.__selector.appendChild(this.__saturation_field);
-	    this.__selector.appendChild(this.__hue_field);
-	    this.__hue_field.appendChild(this.__hue_knob);
+	    function onFinish() {
+	      if (_this.__onFinishChange) {
+	        _this.__onFinishChange.call(_this, _this.__color.toOriginal());
+	      }
+	    }
 	
-	    this.domElement.appendChild(this.__input);
-	    this.domElement.appendChild(this.__selector);
+	    _this2.__saturation_field.appendChild(valueField);
+	    _this2.__selector.appendChild(_this2.__field_knob);
+	    _this2.__selector.appendChild(_this2.__saturation_field);
+	    _this2.__selector.appendChild(_this2.__hue_field);
+	    _this2.__hue_field.appendChild(_this2.__hue_knob);
 	
-	    this.updateDisplay();
+	    _this2.domElement.appendChild(_this2.__input);
+	    _this2.domElement.appendChild(_this2.__selector);
+	
+	    _this2.updateDisplay();
 	
 	    function setSV(e) {
 	      e.preventDefault();
 	
-	      var w = _domDom2['default'].getWidth(_this.__saturation_field);
-	      var o = _domDom2['default'].getOffset(_this.__saturation_field);
-	      var s = (e.clientX - o.left + document.body.scrollLeft) / w;
-	      var v = 1 - (e.clientY - o.top + document.body.scrollTop) / w;
+	      var fieldRect = _this.__saturation_field.getBoundingClientRect();
+	      var s = (e.clientX - fieldRect.left) / (fieldRect.right - fieldRect.left);
+	      var v = 1 - (e.clientY - fieldRect.top) / (fieldRect.bottom - fieldRect.top);
 	
 	      if (v > 1) {
 	        v = 1;
@@ -2735,9 +2496,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	    function setH(e) {
 	      e.preventDefault();
 	
-	      var s = _domDom2['default'].getHeight(_this.__hue_field);
-	      var o = _domDom2['default'].getOffset(_this.__hue_field);
-	      var h = 1 - (e.clientY - o.top + document.body.scrollTop) / s;
+	      var fieldRect = _this.__hue_field.getBoundingClientRect();
+	      var h = 1 - (e.clientY - fieldRect.top) / (fieldRect.bottom - fieldRect.top);
 	
 	      if (h > 1) {
 	        h = 1;
@@ -2751,18 +2511,19 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	      return false;
 	    }
+	    return _this2;
 	  }
 	
 	  ColorController.prototype.updateDisplay = function updateDisplay() {
-	    var i = _colorInterpret2['default'](this.getValue());
+	    var i = (0, _interpret2.default)(this.getValue());
 	
 	    if (i !== false) {
 	      var mismatch = false;
 	
 	      // Check for mismatch on the interpreted value.
 	
-	      _utilsCommon2['default'].each(_colorColor2['default'].COMPONENTS, function (component) {
-	        if (!_utilsCommon2['default'].isUndefined(i[component]) && !_utilsCommon2['default'].isUndefined(this.__color.__state[component]) && i[component] !== this.__color.__state[component]) {
+	      _common2.default.each(_Color2.default.COMPONENTS, function (component) {
+	        if (!_common2.default.isUndefined(i[component]) && !_common2.default.isUndefined(this.__color.__state[component]) && i[component] !== this.__color.__state[component]) {
 	          mismatch = true;
 	          return {}; // break
 	        }
@@ -2771,21 +2532,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	      // If nothing diverges, we keep our previous values
 	      // for statefulness, otherwise we recalculate fresh
 	      if (mismatch) {
-	        _utilsCommon2['default'].extend(this.__color.__state, i);
+	        _common2.default.extend(this.__color.__state, i);
 	      }
 	    }
 	
-	    _utilsCommon2['default'].extend(this.__temp.__state, this.__color.__state);
+	    _common2.default.extend(this.__temp.__state, this.__color.__state);
 	
 	    this.__temp.a = 1;
 	
 	    var flip = this.__color.v < 0.5 || this.__color.s > 0.5 ? 255 : 0;
 	    var _flip = 255 - flip;
 	
-	    _utilsCommon2['default'].extend(this.__field_knob.style, {
+	    _common2.default.extend(this.__field_knob.style, {
 	      marginLeft: 100 * this.__color.s - 7 + 'px',
 	      marginTop: 100 * (1 - this.__color.v) - 7 + 'px',
-	      backgroundColor: this.__temp.toString(),
+	      backgroundColor: this.__temp.toHexString(),
 	      border: this.__field_knob_border + 'rgb(' + flip + ',' + flip + ',' + flip + ')'
 	    });
 	
@@ -2794,23 +2555,25 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.__temp.s = 1;
 	    this.__temp.v = 1;
 	
-	    linearGradient(this.__saturation_field, 'left', '#fff', this.__temp.toString());
+	    linearGradient(this.__saturation_field, 'left', '#fff', this.__temp.toHexString());
 	
-	    _utilsCommon2['default'].extend(this.__input.style, {
-	      backgroundColor: this.__input.value = this.__color.toString(),
+	    this.__input.value = this.__color.toString();
+	
+	    _common2.default.extend(this.__input.style, {
+	      backgroundColor: this.__color.toHexString(),
 	      color: 'rgb(' + flip + ',' + flip + ',' + flip + ')',
 	      textShadow: this.__input_textShadow + 'rgba(' + _flip + ',' + _flip + ',' + _flip + ',.7)'
 	    });
 	  };
 	
 	  return ColorController;
-	})(_Controller3['default']);
+	}(_Controller3.default);
 	
 	var vendors = ['-moz-', '-o-', '-webkit-', '-ms-', ''];
 	
 	function linearGradient(elem, x, a, b) {
 	  elem.style.background = '';
-	  _utilsCommon2['default'].each(vendors, function (vendor) {
+	  _common2.default.each(vendors, function (vendor) {
 	    elem.style.cssText += 'background: ' + vendor + 'linear-gradient(' + x + ', ' + a + ' 0%, ' + b + ' 100%); ';
 	  });
 	}
@@ -2824,87 +2587,88 @@ return /******/ (function(modules) { // webpackBootstrap
 	  elem.style.cssText += 'background: linear-gradient(top,  #ff0000 0%,#ff00ff 17%,#0000ff 34%,#00ffff 50%,#00ff00 67%,#ffff00 84%,#ff0000 100%);';
 	}
 	
-	exports['default'] = ColorController;
-	module.exports = exports['default'];
+	exports.default = ColorController;
 
 /***/ },
-/* 22 */
+/* 17 */
 /***/ function(module, exports, __webpack_require__) {
 
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
 	'use strict';
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; }; /**
+	                                                                                                                                                                                                                                                   * dat-gui JavaScript Controller Library
+	                                                                                                                                                                                                                                                   * http://code.google.com/p/dat-gui
+	                                                                                                                                                                                                                                                   *
+	                                                                                                                                                                                                                                                   * Copyright 2011 Data Arts Team, Google Creative Lab
+	                                                                                                                                                                                                                                                   *
+	                                                                                                                                                                                                                                                   * Licensed under the Apache License, Version 2.0 (the "License");
+	                                                                                                                                                                                                                                                   * you may not use this file except in compliance with the License.
+	                                                                                                                                                                                                                                                   * You may obtain a copy of the License at
+	                                                                                                                                                                                                                                                   *
+	                                                                                                                                                                                                                                                   * http://www.apache.org/licenses/LICENSE-2.0
+	                                                                                                                                                                                                                                                   */
 	
-	var _utilsCss = __webpack_require__(15);
+	var _css = __webpack_require__(18);
 	
-	var _utilsCss2 = _interopRequireDefault(_utilsCss);
+	var _css2 = _interopRequireDefault(_css);
 	
-	var _htmlSaveDialogueHtml = __webpack_require__(23);
+	var _saveDialogue = __webpack_require__(19);
 	
-	var _htmlSaveDialogueHtml2 = _interopRequireDefault(_htmlSaveDialogueHtml);
+	var _saveDialogue2 = _interopRequireDefault(_saveDialogue);
 	
-	var _styleCssSassStyleScss = __webpack_require__(24);
+	var _ControllerFactory = __webpack_require__(20);
 	
-	var _styleCssSassStyleScss2 = _interopRequireDefault(_styleCssSassStyleScss);
+	var _ControllerFactory2 = _interopRequireDefault(_ControllerFactory);
 	
-	var _controllersControllerFactory = __webpack_require__(26);
+	var _Controller = __webpack_require__(7);
 	
-	var _controllersControllerFactory2 = _interopRequireDefault(_controllersControllerFactory);
+	var _Controller2 = _interopRequireDefault(_Controller);
 	
-	var _controllersController = __webpack_require__(7);
+	var _BooleanController = __webpack_require__(8);
 	
-	var _controllersController2 = _interopRequireDefault(_controllersController);
+	var _BooleanController2 = _interopRequireDefault(_BooleanController);
 	
-	var _controllersBooleanController = __webpack_require__(8);
+	var _FunctionController = __webpack_require__(15);
 	
-	var _controllersBooleanController2 = _interopRequireDefault(_controllersBooleanController);
+	var _FunctionController2 = _interopRequireDefault(_FunctionController);
 	
-	var _controllersFunctionController = __webpack_require__(20);
+	var _NumberControllerBox = __webpack_require__(13);
 	
-	var _controllersFunctionController2 = _interopRequireDefault(_controllersFunctionController);
+	var _NumberControllerBox2 = _interopRequireDefault(_NumberControllerBox);
 	
-	var _controllersNumberControllerBox = __webpack_require__(13);
+	var _NumberControllerSlider = __webpack_require__(14);
 	
-	var _controllersNumberControllerBox2 = _interopRequireDefault(_controllersNumberControllerBox);
+	var _NumberControllerSlider2 = _interopRequireDefault(_NumberControllerSlider);
 	
-	var _controllersNumberControllerSlider = __webpack_require__(14);
+	var _ColorController = __webpack_require__(16);
 	
-	var _controllersNumberControllerSlider2 = _interopRequireDefault(_controllersNumberControllerSlider);
+	var _ColorController2 = _interopRequireDefault(_ColorController);
 	
-	var _controllersColorController = __webpack_require__(21);
+	var _requestAnimationFrame = __webpack_require__(21);
 	
-	var _controllersColorController2 = _interopRequireDefault(_controllersColorController);
+	var _requestAnimationFrame2 = _interopRequireDefault(_requestAnimationFrame);
 	
-	var _utilsRequestAnimationFrame = __webpack_require__(27);
+	var _CenteredDiv = __webpack_require__(22);
 	
-	var _utilsRequestAnimationFrame2 = _interopRequireDefault(_utilsRequestAnimationFrame);
+	var _CenteredDiv2 = _interopRequireDefault(_CenteredDiv);
 	
-	var _domCenteredDiv = __webpack_require__(28);
+	var _dom = __webpack_require__(9);
 	
-	var _domCenteredDiv2 = _interopRequireDefault(_domCenteredDiv);
+	var _dom2 = _interopRequireDefault(_dom);
 	
-	var _domDom = __webpack_require__(9);
+	var _common = __webpack_require__(5);
 	
-	var _domDom2 = _interopRequireDefault(_domDom);
+	var _common2 = _interopRequireDefault(_common);
 	
-	var _utilsCommon = __webpack_require__(5);
+	var _style = __webpack_require__(23);
 	
-	var _utilsCommon2 = _interopRequireDefault(_utilsCommon);
+	var _style2 = _interopRequireDefault(_style);
 	
-	_utilsCss2['default'].inject(_styleCssSassStyleScss2['default']);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	// CSS to embed in build
+	
+	_css2.default.inject(_style2.default);
 	
 	/** Outer-most className for GUI's */
 	var CSS_NAMESPACE = 'dg';
@@ -2916,21 +2680,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var DEFAULT_DEFAULT_PRESET_NAME = 'Default';
 	
-	var SUPPORTS_LOCAL_STORAGE = (function () {
+	var SUPPORTS_LOCAL_STORAGE = function () {
 	  try {
 	    return 'localStorage' in window && window.localStorage !== null;
 	  } catch (e) {
 	    return false;
 	  }
-	})();
+	}();
 	
-	var SAVE_DIALOGUE = undefined;
+	var SAVE_DIALOGUE = void 0;
 	
 	/** Have we yet to create an autoPlace GUI? */
 	var autoPlaceVirgin = true;
 	
 	/** Fixed position div that auto place GUI's go inside */
-	var autoPlaceContainer = undefined;
+	var autoPlaceContainer = void 0;
 	
 	/** Are we hiding the GUI's ? */
 	var hide = false;
@@ -2966,7 +2730,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  this.__ul = document.createElement('ul');
 	  this.domElement.appendChild(this.__ul);
 	
-	  _domDom2['default'].addClass(this.domElement, CSS_NAMESPACE);
+	  _dom2.default.addClass(this.domElement, CSS_NAMESPACE);
 	
 	  /**
 	   * Nested GUI's by name
@@ -3005,17 +2769,17 @@ return /******/ (function(modules) { // webpackBootstrap
 	  this.__listening = [];
 	
 	  // Default parameters
-	  params = _utilsCommon2['default'].defaults(params, {
+	  params = _common2.default.defaults(params, {
 	    autoPlace: true,
 	    width: GUI.DEFAULT_WIDTH
 	  });
 	
-	  params = _utilsCommon2['default'].defaults(params, {
+	  params = _common2.default.defaults(params, {
 	    resizable: params.autoPlace,
 	    hideable: params.autoPlace
 	  });
 	
-	  if (!_utilsCommon2['default'].isUndefined(params.load)) {
+	  if (!_common2.default.isUndefined(params.load)) {
 	    // Explicit preset
 	    if (params.preset) {
 	      params.load.preset = params.preset;
@@ -3024,14 +2788,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	    params.load = { preset: DEFAULT_DEFAULT_PRESET_NAME };
 	  }
 	
-	  if (_utilsCommon2['default'].isUndefined(params.parent) && params.hideable) {
+	  if (_common2.default.isUndefined(params.parent) && params.hideable) {
 	    hideableGuis.push(this);
 	  }
 	
 	  // Only root level GUI's are resizable.
-	  params.resizable = _utilsCommon2['default'].isUndefined(params.parent) && params.resizable;
+	  params.resizable = _common2.default.isUndefined(params.parent) && params.resizable;
 	
-	  if (params.autoPlace && _utilsCommon2['default'].isUndefined(params.scrollable)) {
+	  if (params.autoPlace && _common2.default.isUndefined(params.scrollable)) {
 	    params.scrollable = true;
 	  }
 	  //    params.scrollable = common.isUndefined(params.parent) && params.scrollable === true;
@@ -3040,7 +2804,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  // constructor. Should be a 'remembered' value.
 	  var useLocalStorage = SUPPORTS_LOCAL_STORAGE && localStorage.getItem(getLocalStorageHash(this, 'isLocal')) === 'true';
 	
-	  var saveToLocalStorage = undefined;
+	  var saveToLocalStorage = void 0;
 	
 	  Object.defineProperties(this,
 	  /** @lends dat.gui.GUI.prototype */
@@ -3138,9 +2902,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	      set: function set(v) {
 	        params.closed = v;
 	        if (params.closed) {
-	          _domDom2['default'].addClass(_this.__ul, GUI.CLASS_CLOSED);
+	          _dom2.default.addClass(_this.__ul, GUI.CLASS_CLOSED);
 	        } else {
-	          _domDom2['default'].removeClass(_this.__ul, GUI.CLASS_CLOSED);
+	          _dom2.default.removeClass(_this.__ul, GUI.CLASS_CLOSED);
 	        }
 	        // For browsers that aren't going to respect the CSS transition,
 	        // Lets just check our height against the window height right off
@@ -3177,9 +2941,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	        if (SUPPORTS_LOCAL_STORAGE) {
 	          useLocalStorage = bool;
 	          if (bool) {
-	            _domDom2['default'].bind(window, 'unload', saveToLocalStorage);
+	            _dom2.default.bind(window, 'unload', saveToLocalStorage);
 	          } else {
-	            _domDom2['default'].unbind(window, 'unload', saveToLocalStorage);
+	            _dom2.default.unbind(window, 'unload', saveToLocalStorage);
 	          }
 	          localStorage.setItem(getLocalStorageHash(_this, 'isLocal'), bool);
 	        }
@@ -3188,11 +2952,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	  });
 	
 	  // Are we a root level GUI?
-	  if (_utilsCommon2['default'].isUndefined(params.parent)) {
+	  if (_common2.default.isUndefined(params.parent)) {
 	    params.closed = false;
 	
-	    _domDom2['default'].addClass(this.domElement, GUI.CLASS_MAIN);
-	    _domDom2['default'].makeSelectable(this.domElement, false);
+	    _dom2.default.addClass(this.domElement, GUI.CLASS_MAIN);
+	    _dom2.default.makeSelectable(this.domElement, false);
 	
 	    // Are we supposed to be loading locally?
 	    if (SUPPORTS_LOCAL_STORAGE) {
@@ -3209,45 +2973,45 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    this.__closeButton = document.createElement('div');
 	    this.__closeButton.innerHTML = GUI.TEXT_CLOSED;
-	    _domDom2['default'].addClass(this.__closeButton, GUI.CLASS_CLOSE_BUTTON);
+	    _dom2.default.addClass(this.__closeButton, GUI.CLASS_CLOSE_BUTTON);
 	    this.domElement.appendChild(this.__closeButton);
 	
-	    _domDom2['default'].bind(this.__closeButton, 'click', function () {
+	    _dom2.default.bind(this.__closeButton, 'click', function () {
 	      _this.closed = !_this.closed;
 	    });
 	    // Oh, you're a nested GUI!
 	  } else {
-	      if (params.closed === undefined) {
-	        params.closed = true;
-	      }
-	
-	      var _titleRowName = document.createTextNode(params.name);
-	      _domDom2['default'].addClass(_titleRowName, 'controller-name');
-	
-	      var titleRow = addRow(_this, _titleRowName);
-	
-	      var onClickTitle = function onClickTitle(e) {
-	        e.preventDefault();
-	        _this.closed = !_this.closed;
-	        return false;
-	      };
-	
-	      _domDom2['default'].addClass(this.__ul, GUI.CLASS_CLOSED);
-	
-	      _domDom2['default'].addClass(titleRow, 'title');
-	      _domDom2['default'].bind(titleRow, 'click', onClickTitle);
-	
-	      if (!params.closed) {
-	        this.closed = false;
-	      }
+	    if (params.closed === undefined) {
+	      params.closed = true;
 	    }
 	
+	    var _titleRowName = document.createTextNode(params.name);
+	    _dom2.default.addClass(_titleRowName, 'controller-name');
+	
+	    var titleRow = addRow(_this, _titleRowName);
+	
+	    var onClickTitle = function onClickTitle(e) {
+	      e.preventDefault();
+	      _this.closed = !_this.closed;
+	      return false;
+	    };
+	
+	    _dom2.default.addClass(this.__ul, GUI.CLASS_CLOSED);
+	
+	    _dom2.default.addClass(titleRow, 'title');
+	    _dom2.default.bind(titleRow, 'click', onClickTitle);
+	
+	    if (!params.closed) {
+	      this.closed = false;
+	    }
+	  }
+	
 	  if (params.autoPlace) {
-	    if (_utilsCommon2['default'].isUndefined(params.parent)) {
+	    if (_common2.default.isUndefined(params.parent)) {
 	      if (autoPlaceVirgin) {
 	        autoPlaceContainer = document.createElement('div');
-	        _domDom2['default'].addClass(autoPlaceContainer, CSS_NAMESPACE);
-	        _domDom2['default'].addClass(autoPlaceContainer, GUI.CLASS_AUTO_PLACE_CONTAINER);
+	        _dom2.default.addClass(autoPlaceContainer, CSS_NAMESPACE);
+	        _dom2.default.addClass(autoPlaceContainer, GUI.CLASS_AUTO_PLACE_CONTAINER);
 	        document.body.appendChild(autoPlaceContainer);
 	        autoPlaceVirgin = false;
 	      }
@@ -3256,7 +3020,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      autoPlaceContainer.appendChild(this.domElement);
 	
 	      // Apply the auto styles
-	      _domDom2['default'].addClass(this.domElement, GUI.CLASS_AUTO_PLACE);
+	      _dom2.default.addClass(this.domElement, GUI.CLASS_AUTO_PLACE);
 	    }
 	
 	    // Make it not elastic.
@@ -3265,25 +3029,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	  }
 	
-	  _domDom2['default'].bind(window, 'resize', function () {
-	    _this.onResize();
-	  });
-	  _domDom2['default'].bind(this.__ul, 'webkitTransitionEnd', function () {
-	    _this.onResize();
-	  });
-	  _domDom2['default'].bind(this.__ul, 'transitionend', function () {
-	    _this.onResize();
-	  });
-	  _domDom2['default'].bind(this.__ul, 'oTransitionEnd', function () {
-	    _this.onResize();
-	  });
+	  this.__resizeHandler = function () {
+	    _this.onResizeDebounced();
+	  };
+	
+	  _dom2.default.bind(window, 'resize', this.__resizeHandler);
+	  _dom2.default.bind(this.__ul, 'webkitTransitionEnd', this.__resizeHandler);
+	  _dom2.default.bind(this.__ul, 'transitionend', this.__resizeHandler);
+	  _dom2.default.bind(this.__ul, 'oTransitionEnd', this.__resizeHandler);
 	  this.onResize();
 	
 	  if (params.resizable) {
 	    addResizeHandle(this);
 	  }
 	
-	  saveToLocalStorage = function () {
+	  saveToLocalStorage = function saveToLocalStorage() {
 	    if (SUPPORTS_LOCAL_STORAGE && localStorage.getItem(getLocalStorageHash(_this, 'isLocal')) === 'true') {
 	      localStorage.setItem(getLocalStorageHash(_this, 'gui'), JSON.stringify(_this.getSaveObject()));
 	    }
@@ -3295,7 +3055,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  function resetWidth() {
 	    var root = _this.getRoot();
 	    root.width += 1;
-	    _utilsCommon2['default'].defer(function () {
+	    _common2.default.defer(function () {
 	      root.width -= 1;
 	    });
 	  }
@@ -3307,9 +3067,8 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	GUI.toggleHide = function () {
 	  hide = !hide;
-	  _utilsCommon2['default'].each(hideableGuis, function (gui) {
-	    gui.domElement.style.zIndex = hide ? -999 : 999;
-	    gui.domElement.style.opacity = hide ? 0 : 1;
+	  _common2.default.each(hideableGuis, function (gui) {
+	    gui.domElement.style.display = hide ? 'none' : '';
 	  });
 	};
 	
@@ -3326,13 +3085,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	GUI.TEXT_CLOSED = 'Close Controls';
 	GUI.TEXT_OPEN = 'Open Controls';
 	
-	_domDom2['default'].bind(window, 'keydown', function (e) {
+	GUI._keydownHandler = function (e) {
 	  if (document.activeElement.type !== 'text' && (e.which === HIDE_KEY_CODE || e.keyCode === HIDE_KEY_CODE)) {
 	    GUI.toggleHide();
 	  }
-	}, false);
+	};
+	_dom2.default.bind(window, 'keydown', GUI._keydownHandler, false);
 	
-	_utilsCommon2['default'].extend(GUI.prototype,
+	_common2.default.extend(GUI.prototype,
 	
 	/** @lends dat.gui.GUI */
 	{
@@ -3343,21 +3103,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @returns {dat.controllers.Controller} The new controller that was added.
 	   * @instance
 	   */
-	  add: (function (_add) {
-	    function add(_x, _x2) {
-	      return _add.apply(this, arguments);
-	    }
-	
-	    add.toString = function () {
-	      return _add.toString();
-	    };
-	
-	    return add;
-	  })(function (object, property) {
-	    return add(this, object, property, {
+	  add: function add(object, property) {
+	    return _add(this, object, property, {
 	      factoryArgs: Array.prototype.slice.call(arguments, 2)
 	    });
-	  }),
+	  },
 	
 	  /**
 	   * @param object
@@ -3366,7 +3116,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @instance
 	   */
 	  addColor: function addColor(object, property) {
-	    return add(this, object, property, {
+	    return _add(this, object, property, {
 	      color: true
 	    });
 	  },
@@ -3380,7 +3130,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.__ul.removeChild(controller.__li);
 	    this.__controllers.splice(this.__controllers.indexOf(controller), 1);
 	    var _this = this;
-	    _utilsCommon2['default'].defer(function () {
+	    _common2.default.defer(function () {
 	      _this.onResize();
 	    });
 	  },
@@ -3388,6 +3138,13 @@ return /******/ (function(modules) { // webpackBootstrap
 	  destroy: function destroy() {
 	    if (this.autoPlace) {
 	      autoPlaceContainer.removeChild(this.domElement);
+	    }
+	
+	    _dom2.default.unbind(window, 'keydown', GUI._keydownHandler, false);
+	    _dom2.default.unbind(window, 'resize', this.__resizeHandler);
+	
+	    if (this.saveToLocalStorageIfPossible) {
+	      _dom2.default.unbind(window, 'unload', this.saveToLocalStorageIfPossible);
 	    }
 	  },
 	
@@ -3413,12 +3170,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	    newGuiParams.autoPlace = this.autoPlace;
 	
 	    // Do we have saved appearance data for this folder?
-	
 	    if (this.load && // Anything loaded?
 	    this.load.folders && // Was my parent a dead-end?
 	    this.load.folders[name]) {
 	      // Did daddy remember me?
-	
 	      // Start me closed if I was closed
 	      newGuiParams.closed = this.load.folders[name].closed;
 	
@@ -3430,7 +3185,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    this.__folders[name] = gui;
 	
 	    var li = addRow(this, gui.domElement);
-	    _domDom2['default'].addClass(li, 'folder');
+	    _dom2.default.addClass(li, 'folder');
 	    return gui;
 	  },
 	
@@ -3443,28 +3198,29 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  onResize: function onResize() {
+	    // we debounce this function to prevent performance issues when rotating on tablet/mobile
 	    var root = this.getRoot();
 	    if (root.scrollable) {
-	      var _top = _domDom2['default'].getOffset(root.__ul).top;
+	      var top = _dom2.default.getOffset(root.__ul).top;
 	      var h = 0;
 	
-	      _utilsCommon2['default'].each(root.__ul.childNodes, function (node) {
+	      _common2.default.each(root.__ul.childNodes, function (node) {
 	        if (!(root.autoPlace && node === root.__save_row)) {
-	          h += _domDom2['default'].getHeight(node);
+	          h += _dom2.default.getHeight(node);
 	        }
 	      });
 	
-	      if (window.innerHeight - _top - CLOSE_BUTTON_HEIGHT < h) {
-	        _domDom2['default'].addClass(root.domElement, GUI.CLASS_TOO_TALL);
-	        root.__ul.style.height = window.innerHeight - _top - CLOSE_BUTTON_HEIGHT + 'px';
+	      if (window.innerHeight - top - CLOSE_BUTTON_HEIGHT < h) {
+	        _dom2.default.addClass(root.domElement, GUI.CLASS_TOO_TALL);
+	        root.__ul.style.height = window.innerHeight - top - CLOSE_BUTTON_HEIGHT + 'px';
 	      } else {
-	        _domDom2['default'].removeClass(root.domElement, GUI.CLASS_TOO_TALL);
+	        _dom2.default.removeClass(root.domElement, GUI.CLASS_TOO_TALL);
 	        root.__ul.style.height = 'auto';
 	      }
 	    }
 	
 	    if (root.__resize_handle) {
-	      _utilsCommon2['default'].defer(function () {
+	      _common2.default.defer(function () {
 	        root.__resize_handle.style.height = root.__ul.offsetHeight + 'px';
 	      });
 	    }
@@ -3473,6 +3229,10 @@ return /******/ (function(modules) { // webpackBootstrap
 	      root.__closeButton.style.width = root.width + 'px';
 	    }
 	  },
+	
+	  onResizeDebounced: _common2.default.debounce(function () {
+	    this.onResize();
+	  }, 200),
 	
 	  /**
 	   * Mark objects for saving. The order of these objects cannot change as
@@ -3484,9 +3244,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * @instance
 	   */
 	  remember: function remember() {
-	    if (_utilsCommon2['default'].isUndefined(SAVE_DIALOGUE)) {
-	      SAVE_DIALOGUE = new _domCenteredDiv2['default']();
-	      SAVE_DIALOGUE.domElement.innerHTML = _htmlSaveDialogueHtml2['default'];
+	    if (_common2.default.isUndefined(SAVE_DIALOGUE)) {
+	      SAVE_DIALOGUE = new _CenteredDiv2.default();
+	      SAVE_DIALOGUE.domElement.innerHTML = _saveDialogue2.default;
 	    }
 	
 	    if (this.parent) {
@@ -3495,7 +3255,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    var _this = this;
 	
-	    _utilsCommon2['default'].each(Array.prototype.slice.call(arguments), function (object) {
+	    _common2.default.each(Array.prototype.slice.call(arguments), function (object) {
 	      if (_this.__rememberedObjects.length === 0) {
 	        addSaveMenu(_this);
 	      }
@@ -3543,7 +3303,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    }
 	
 	    toReturn.folders = {};
-	    _utilsCommon2['default'].each(this.__folders, function (element, key) {
+	    _common2.default.each(this.__folders, function (element, key) {
 	      toReturn.folders[key] = element.getSaveObject();
 	    });
 	
@@ -3574,16 +3334,21 @@ return /******/ (function(modules) { // webpackBootstrap
 	  },
 	
 	  revert: function revert(gui) {
-	    _utilsCommon2['default'].each(this.__controllers, function (controller) {
+	    _common2.default.each(this.__controllers, function (controller) {
 	      // Make revert work on Default.
 	      if (!this.getRoot().load.remembered) {
 	        controller.setValue(controller.initialValue);
 	      } else {
 	        recallSavedValue(gui || this.getRoot(), controller);
 	      }
+	
+	      // fire onFinishChange callback
+	      if (controller.__onFinishChange) {
+	        controller.__onFinishChange.call(controller, controller.getValue());
+	      }
 	    }, this);
 	
-	    _utilsCommon2['default'].each(this.__folders, function (folder) {
+	    _common2.default.each(this.__folders, function (folder) {
 	      folder.revert(folder);
 	    });
 	
@@ -3598,6 +3363,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	    if (init) {
 	      updateDisplays(this.__listening);
 	    }
+	  },
+	
+	  updateDisplay: function updateDisplay() {
+	    _common2.default.each(this.__controllers, function (controller) {
+	      controller.updateDisplay();
+	    });
+	    _common2.default.each(this.__folders, function (folder) {
+	      folder.updateDisplay();
+	    });
 	  }
 	});
 	
@@ -3615,7 +3389,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	
 	  if (liBefore) {
-	    gui.__ul.insertBefore(li, params.before);
+	    gui.__ul.insertBefore(li, liBefore);
 	  } else {
 	    gui.__ul.appendChild(li);
 	  }
@@ -3638,22 +3412,24 @@ return /******/ (function(modules) { // webpackBootstrap
 	  controller.__li = li;
 	  controller.__gui = gui;
 	
-	  _utilsCommon2['default'].extend(controller, {
+	  _common2.default.extend(controller, {
 	    options: function options(_options) {
 	      if (arguments.length > 1) {
+	        var nextSibling = controller.__li.nextElementSibling;
 	        controller.remove();
 	
-	        return add(gui, controller.object, controller.property, {
-	          before: controller.__li.nextElementSibling,
-	          factoryArgs: [_utilsCommon2['default'].toArray(arguments)]
+	        return _add(gui, controller.object, controller.property, {
+	          before: nextSibling,
+	          factoryArgs: [_common2.default.toArray(arguments)]
 	        });
 	      }
 	
-	      if (_utilsCommon2['default'].isArray(_options) || _utilsCommon2['default'].isObject(_options)) {
+	      if (_common2.default.isArray(_options) || _common2.default.isObject(_options)) {
+	        var _nextSibling = controller.__li.nextElementSibling;
 	        controller.remove();
 	
-	        return add(gui, controller.object, controller.property, {
-	          before: controller.__li.nextElementSibling,
+	        return _add(gui, controller.object, controller.property, {
+	          before: _nextSibling,
 	          factoryArgs: [_options]
 	        });
 	      }
@@ -3676,71 +3452,81 @@ return /******/ (function(modules) { // webpackBootstrap
 	  });
 	
 	  // All sliders should be accompanied by a box.
-	  if (controller instanceof _controllersNumberControllerSlider2['default']) {
+	  if (controller instanceof _NumberControllerSlider2.default) {
 	    (function () {
-	      var box = new _controllersNumberControllerBox2['default'](controller.object, controller.property, { min: controller.__min, max: controller.__max, step: controller.__step });
+	      var box = new _NumberControllerBox2.default(controller.object, controller.property, { min: controller.__min, max: controller.__max, step: controller.__step });
 	
-	      _utilsCommon2['default'].each(['updateDisplay', 'onChange', 'onFinishChange'], function (method) {
+	      _common2.default.each(['updateDisplay', 'onChange', 'onFinishChange', 'step'], function (method) {
 	        var pc = controller[method];
 	        var pb = box[method];
 	        controller[method] = box[method] = function () {
 	          var args = Array.prototype.slice.call(arguments);
-	          pc.apply(controller, args);
-	          return pb.apply(box, args);
+	          pb.apply(box, args);
+	          return pc.apply(controller, args);
 	        };
 	      });
 	
-	      _domDom2['default'].addClass(li, 'has-slider');
+	      _dom2.default.addClass(li, 'has-slider');
 	      controller.domElement.insertBefore(box.domElement, controller.domElement.firstElementChild);
 	    })();
-	  } else if (controller instanceof _controllersNumberControllerBox2['default']) {
+	  } else if (controller instanceof _NumberControllerBox2.default) {
 	    var r = function r(returned) {
 	      // Have we defined both boundaries?
-	      if (_utilsCommon2['default'].isNumber(controller.__min) && _utilsCommon2['default'].isNumber(controller.__max)) {
+	      if (_common2.default.isNumber(controller.__min) && _common2.default.isNumber(controller.__max)) {
 	        // Well, then lets just replace this with a slider.
+	
+	        // lets remember if the old controller had a specific name or was listening
+	        var oldName = controller.__li.firstElementChild.firstElementChild.innerHTML;
+	        var wasListening = controller.__gui.__listening.indexOf(controller) > -1;
+	
 	        controller.remove();
-	        return add(gui, controller.object, controller.property, {
+	        var newController = _add(gui, controller.object, controller.property, {
 	          before: controller.__li.nextElementSibling,
 	          factoryArgs: [controller.__min, controller.__max, controller.__step]
 	        });
+	
+	        newController.name(oldName);
+	        if (wasListening) newController.listen();
+	
+	        return newController;
 	      }
 	
 	      return returned;
 	    };
 	
-	    controller.min = _utilsCommon2['default'].compose(r, controller.min);
-	    controller.max = _utilsCommon2['default'].compose(r, controller.max);
-	  } else if (controller instanceof _controllersBooleanController2['default']) {
-	    _domDom2['default'].bind(li, 'click', function () {
-	      _domDom2['default'].fakeEvent(controller.__checkbox, 'click');
+	    controller.min = _common2.default.compose(r, controller.min);
+	    controller.max = _common2.default.compose(r, controller.max);
+	  } else if (controller instanceof _BooleanController2.default) {
+	    _dom2.default.bind(li, 'click', function () {
+	      _dom2.default.fakeEvent(controller.__checkbox, 'click');
 	    });
 	
-	    _domDom2['default'].bind(controller.__checkbox, 'click', function (e) {
+	    _dom2.default.bind(controller.__checkbox, 'click', function (e) {
 	      e.stopPropagation(); // Prevents double-toggle
 	    });
-	  } else if (controller instanceof _controllersFunctionController2['default']) {
-	      _domDom2['default'].bind(li, 'click', function () {
-	        _domDom2['default'].fakeEvent(controller.__button, 'click');
-	      });
+	  } else if (controller instanceof _FunctionController2.default) {
+	    _dom2.default.bind(li, 'click', function () {
+	      _dom2.default.fakeEvent(controller.__button, 'click');
+	    });
 	
-	      _domDom2['default'].bind(li, 'mouseover', function () {
-	        _domDom2['default'].addClass(controller.__button, 'hover');
-	      });
+	    _dom2.default.bind(li, 'mouseover', function () {
+	      _dom2.default.addClass(controller.__button, 'hover');
+	    });
 	
-	      _domDom2['default'].bind(li, 'mouseout', function () {
-	        _domDom2['default'].removeClass(controller.__button, 'hover');
-	      });
-	    } else if (controller instanceof _controllersColorController2['default']) {
-	      _domDom2['default'].addClass(li, 'color');
-	      controller.updateDisplay = _utilsCommon2['default'].compose(function (val) {
-	        li.style.borderLeftColor = controller.__color.toString();
-	        return val;
-	      }, controller.updateDisplay);
+	    _dom2.default.bind(li, 'mouseout', function () {
+	      _dom2.default.removeClass(controller.__button, 'hover');
+	    });
+	  } else if (controller instanceof _ColorController2.default) {
+	    _dom2.default.addClass(li, 'color');
+	    controller.updateDisplay = _common2.default.compose(function (val) {
+	      li.style.borderLeftColor = controller.__color.toString();
+	      return val;
+	    }, controller.updateDisplay);
 	
-	      controller.updateDisplay();
-	    }
+	    controller.updateDisplay();
+	  }
 	
-	  controller.setValue = _utilsCommon2['default'].compose(function (val) {
+	  controller.setValue = _common2.default.compose(function (val) {
 	    if (gui.getRoot().__preset_select && controller.isModified()) {
 	      markPresetModified(gui.getRoot(), true);
 	    }
@@ -3777,7 +3563,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      var presetMap = root.load.remembered;
 	
 	      // Which preset are we trying to load?
-	      var preset = undefined;
+	      var preset = void 0;
 	
 	      if (presetMap[gui.preset]) {
 	        preset = presetMap[gui.preset];
@@ -3802,30 +3588,30 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	}
 	
-	function add(gui, object, property, params) {
+	function _add(gui, object, property, params) {
 	  if (object[property] === undefined) {
 	    throw new Error('Object "' + object + '" has no property "' + property + '"');
 	  }
 	
-	  var controller = undefined;
+	  var controller = void 0;
 	
 	  if (params.color) {
-	    controller = new _controllersColorController2['default'](object, property);
+	    controller = new _ColorController2.default(object, property);
 	  } else {
 	    var factoryArgs = [object, property].concat(params.factoryArgs);
-	    controller = _controllersControllerFactory2['default'].apply(gui, factoryArgs);
+	    controller = _ControllerFactory2.default.apply(gui, factoryArgs);
 	  }
 	
-	  if (params.before instanceof _controllersController2['default']) {
+	  if (params.before instanceof _Controller2.default) {
 	    params.before = params.before.__li;
 	  }
 	
 	  recallSavedValue(gui, controller);
 	
-	  _domDom2['default'].addClass(controller.domElement, 'c');
+	  _dom2.default.addClass(controller.domElement, 'c');
 	
 	  var name = document.createElement('span');
-	  _domDom2['default'].addClass(name, 'property-name');
+	  _dom2.default.addClass(name, 'property-name');
 	  name.innerHTML = controller.property;
 	
 	  var container = document.createElement('div');
@@ -3834,11 +3620,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  var li = addRow(gui, container, params.before);
 	
-	  _domDom2['default'].addClass(li, GUI.CLASS_CONTROLLER_ROW);
-	  if (controller instanceof _controllersColorController2['default']) {
-	    _domDom2['default'].addClass(li, 'color');
+	  _dom2.default.addClass(li, GUI.CLASS_CONTROLLER_ROW);
+	  if (controller instanceof _ColorController2.default) {
+	    _dom2.default.addClass(li, 'color');
 	  } else {
-	    _domDom2['default'].addClass(li, typeof controller.getValue());
+	    _dom2.default.addClass(li, _typeof(controller.getValue()));
 	  }
 	
 	  augmentController(gui, li, controller);
@@ -3870,43 +3656,43 @@ return /******/ (function(modules) { // webpackBootstrap
 	function addSaveMenu(gui) {
 	  var div = gui.__save_row = document.createElement('li');
 	
-	  _domDom2['default'].addClass(gui.domElement, 'has-save');
+	  _dom2.default.addClass(gui.domElement, 'has-save');
 	
 	  gui.__ul.insertBefore(div, gui.__ul.firstChild);
 	
-	  _domDom2['default'].addClass(div, 'save-row');
+	  _dom2.default.addClass(div, 'save-row');
 	
 	  var gears = document.createElement('span');
 	  gears.innerHTML = '&nbsp;';
-	  _domDom2['default'].addClass(gears, 'button gears');
+	  _dom2.default.addClass(gears, 'button gears');
 	
 	  // TODO replace with FunctionController
 	  var button = document.createElement('span');
 	  button.innerHTML = 'Save';
-	  _domDom2['default'].addClass(button, 'button');
-	  _domDom2['default'].addClass(button, 'save');
+	  _dom2.default.addClass(button, 'button');
+	  _dom2.default.addClass(button, 'save');
 	
 	  var button2 = document.createElement('span');
 	  button2.innerHTML = 'New';
-	  _domDom2['default'].addClass(button2, 'button');
-	  _domDom2['default'].addClass(button2, 'save-as');
+	  _dom2.default.addClass(button2, 'button');
+	  _dom2.default.addClass(button2, 'save-as');
 	
 	  var button3 = document.createElement('span');
 	  button3.innerHTML = 'Revert';
-	  _domDom2['default'].addClass(button3, 'button');
-	  _domDom2['default'].addClass(button3, 'revert');
+	  _dom2.default.addClass(button3, 'button');
+	  _dom2.default.addClass(button3, 'revert');
 	
 	  var select = gui.__preset_select = document.createElement('select');
 	
 	  if (gui.load && gui.load.remembered) {
-	    _utilsCommon2['default'].each(gui.load.remembered, function (value, key) {
+	    _common2.default.each(gui.load.remembered, function (value, key) {
 	      addPresetOption(gui, key, key === gui.preset);
 	    });
 	  } else {
 	    addPresetOption(gui, DEFAULT_DEFAULT_PRESET_NAME, false);
 	  }
 	
-	  _domDom2['default'].bind(select, 'change', function () {
+	  _dom2.default.bind(select, 'change', function () {
 	    for (var index = 0; index < gui.__preset_select.length; index++) {
 	      gui.__preset_select[index].innerHTML = gui.__preset_select[index].value;
 	    }
@@ -3935,7 +3721,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	      showHideExplain(gui, explain);
 	
 	      // TODO: Use a boolean controller, fool!
-	      _domDom2['default'].bind(localStorageCheckBox, 'change', function () {
+	      _dom2.default.bind(localStorageCheckBox, 'change', function () {
 	        gui.useLocalStorage = !gui.useLocalStorage;
 	        showHideExplain(gui, explain);
 	      });
@@ -3944,31 +3730,31 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	  var newConstructorTextArea = document.getElementById('dg-new-constructor');
 	
-	  _domDom2['default'].bind(newConstructorTextArea, 'keydown', function (e) {
+	  _dom2.default.bind(newConstructorTextArea, 'keydown', function (e) {
 	    if (e.metaKey && (e.which === 67 || e.keyCode === 67)) {
 	      SAVE_DIALOGUE.hide();
 	    }
 	  });
 	
-	  _domDom2['default'].bind(gears, 'click', function () {
+	  _dom2.default.bind(gears, 'click', function () {
 	    newConstructorTextArea.innerHTML = JSON.stringify(gui.getSaveObject(), undefined, 2);
 	    SAVE_DIALOGUE.show();
 	    newConstructorTextArea.focus();
 	    newConstructorTextArea.select();
 	  });
 	
-	  _domDom2['default'].bind(button, 'click', function () {
+	  _dom2.default.bind(button, 'click', function () {
 	    gui.save();
 	  });
 	
-	  _domDom2['default'].bind(button2, 'click', function () {
+	  _dom2.default.bind(button2, 'click', function () {
 	    var presetName = prompt('Enter a new preset name.');
 	    if (presetName) {
 	      gui.saveAs(presetName);
 	    }
 	  });
 	
-	  _domDom2['default'].bind(button3, 'click', function () {
+	  _dom2.default.bind(button3, 'click', function () {
 	    gui.revert();
 	  });
 	
@@ -3976,11 +3762,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	}
 	
 	function addResizeHandle(gui) {
-	  var pmouseX = undefined;
+	  var pmouseX = void 0;
 	
 	  gui.__resize_handle = document.createElement('div');
 	
-	  _utilsCommon2['default'].extend(gui.__resize_handle.style, {
+	  _common2.default.extend(gui.__resize_handle.style, {
 	
 	    width: '6px',
 	    marginLeft: '-3px',
@@ -4002,9 +3788,9 @@ return /******/ (function(modules) { // webpackBootstrap
 	  }
 	
 	  function dragStop() {
-	    _domDom2['default'].removeClass(gui.__closeButton, GUI.CLASS_DRAG);
-	    _domDom2['default'].unbind(window, 'mousemove', drag);
-	    _domDom2['default'].unbind(window, 'mouseup', dragStop);
+	    _dom2.default.removeClass(gui.__closeButton, GUI.CLASS_DRAG);
+	    _dom2.default.unbind(window, 'mousemove', drag);
+	    _dom2.default.unbind(window, 'mouseup', dragStop);
 	  }
 	
 	  function dragStart(e) {
@@ -4012,15 +3798,15 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    pmouseX = e.clientX;
 	
-	    _domDom2['default'].addClass(gui.__closeButton, GUI.CLASS_DRAG);
-	    _domDom2['default'].bind(window, 'mousemove', drag);
-	    _domDom2['default'].bind(window, 'mouseup', dragStop);
+	    _dom2.default.addClass(gui.__closeButton, GUI.CLASS_DRAG);
+	    _dom2.default.bind(window, 'mousemove', drag);
+	    _dom2.default.bind(window, 'mouseup', dragStop);
 	
 	    return false;
 	  }
 	
-	  _domDom2['default'].bind(gui.__resize_handle, 'mousedown', dragStart);
-	  _domDom2['default'].bind(gui.__closeButton, 'mousedown', dragStart);
+	  _dom2.default.bind(gui.__resize_handle, 'mousedown', dragStart);
+	  _dom2.default.bind(gui.__closeButton, 'mousedown', dragStart);
 	
 	  gui.domElement.insertBefore(gui.__resize_handle, gui.domElement.firstElementChild);
 	}
@@ -4041,14 +3827,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	  var toReturn = {};
 	
 	  // For each object I'm remembering
-	  _utilsCommon2['default'].each(gui.__rememberedObjects, function (val, index) {
+	  _common2.default.each(gui.__rememberedObjects, function (val, index) {
 	    var savedValues = {};
 	
 	    // The controllers I've made for thcommon.isObject by property
 	    var controllerMap = gui.__rememberedObjectIndecesToControllers[index];
 	
 	    // Remember each value for each property
-	    _utilsCommon2['default'].each(controllerMap, function (controller, property) {
+	    _common2.default.each(controllerMap, function (controller, property) {
 	      savedValues[property] = useInitialValues ? controller.initialValue : controller.getValue();
 	    });
 	
@@ -4069,12 +3855,12 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	function updateDisplays(controllerArray) {
 	  if (controllerArray.length !== 0) {
-	    _utilsRequestAnimationFrame2['default'](function () {
+	    _requestAnimationFrame2.default.call(window, function () {
 	      updateDisplays(controllerArray);
 	    });
 	  }
 	
-	  _utilsCommon2['default'].each(controllerArray, function (c) {
+	  _common2.default.each(controllerArray, function (c) {
 	    c.updateDisplay();
 	  });
 	}
@@ -4082,55 +3868,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	module.exports = GUI;
 
 /***/ },
-/* 23 */
+/* 18 */
 /***/ function(module, exports) {
 
-	module.exports = "<div id=\"dg-save\" class=\"dg dialogue\">\n\n  Here's the new load parameter for your <code>GUI</code>'s constructor:\n\n  <textarea id=\"dg-new-constructor\"></textarea>\n\n  <div id=\"dg-save-locally\">\n\n    <input id=\"dg-local-storage\" type=\"checkbox\"/> Automatically save\n    values to <code>localStorage</code> on exit.\n\n    <div id=\"dg-local-explain\">The values saved to <code>localStorage</code> will\n      override those passed to <code>dat.GUI</code>'s constructor. This makes it\n      easier to work incrementally, but <code>localStorage</code> is fragile,\n      and your friends may not see the same values you do.\n\n    </div>\n\n  </div>\n\n</div>";
-
-/***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-	// style-loader: Adds some css to the DOM by adding a <style> tag
+	'use strict';
 	
-	// load the styles
-	var content = __webpack_require__(25);
-	if(typeof content === 'string') content = [[module.id, content, '']];
-	// add the styles to the DOM
-	var update = __webpack_require__(19)(content, {});
-	if(content.locals) module.exports = content.locals;
-	// Hot Module Replacement
-	if(false) {
-		// When the styles change, update the <style> tags
-		if(!content.locals) {
-			module.hot.accept("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./style.scss", function() {
-				var newContent = require("!!./../../../node_modules/css-loader/index.js!./../../../node_modules/sass-loader/index.js!./style.scss");
-				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-				update(newContent);
-			});
-		}
-		// When the module is disposed, remove the <style> tags
-		module.hot.dispose(function() { update(); });
-	}
-
-/***/ },
-/* 25 */
-/***/ function(module, exports, __webpack_require__) {
-
-	exports = module.exports = __webpack_require__(18)();
-	// imports
-	
-	
-	// module
-	exports.push([module.id, ".dg {\n  /** Clear list styles */\n  /* Auto-place container */\n  /* Auto-placed GUI's */\n  /* Line items that don't contain folders. */\n  /** Folder names */\n  /** Hides closed items */\n  /** Controller row */\n  /** Name-half (left) */\n  /** Controller-half (right) */\n  /** Controller placement */\n  /** Shorter number boxes when slider is present. */\n  /** Ensure the entire boolean and function row shows a hand */ }\n  .dg ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    width: 100%;\n    clear: both; }\n  .dg.ac {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    height: 0;\n    z-index: 0; }\n  .dg:not(.ac) .main {\n    /** Exclude mains in ac so that we don't hide close button */\n    overflow: hidden; }\n  .dg.main {\n    -webkit-transition: opacity 0.1s linear;\n    -o-transition: opacity 0.1s linear;\n    -moz-transition: opacity 0.1s linear;\n    transition: opacity 0.1s linear; }\n    .dg.main.taller-than-window {\n      overflow-y: auto; }\n      .dg.main.taller-than-window .close-button {\n        opacity: 1;\n        /* TODO, these are style notes */\n        margin-top: -1px;\n        border-top: 1px solid #2c2c2c; }\n    .dg.main ul.closed .close-button {\n      opacity: 1 !important; }\n    .dg.main:hover .close-button,\n    .dg.main .close-button.drag {\n      opacity: 1; }\n    .dg.main .close-button {\n      /*opacity: 0;*/\n      -webkit-transition: opacity 0.1s linear;\n      -o-transition: opacity 0.1s linear;\n      -moz-transition: opacity 0.1s linear;\n      transition: opacity 0.1s linear;\n      border: 0;\n      position: absolute;\n      line-height: 19px;\n      height: 20px;\n      /* TODO, these are style notes */\n      cursor: pointer;\n      text-align: center;\n      background-color: #000; }\n      .dg.main .close-button:hover {\n        background-color: #111; }\n  .dg.a {\n    float: right;\n    margin-right: 15px;\n    overflow-x: hidden; }\n    .dg.a.has-save > ul {\n      margin-top: 27px; }\n      .dg.a.has-save > ul.closed {\n        margin-top: 0; }\n    .dg.a .save-row {\n      position: fixed;\n      top: 0;\n      z-index: 1002; }\n  .dg li {\n    -webkit-transition: height 0.1s ease-out;\n    -o-transition: height 0.1s ease-out;\n    -moz-transition: height 0.1s ease-out;\n    transition: height 0.1s ease-out; }\n  .dg li:not(.folder) {\n    cursor: auto;\n    height: 27px;\n    line-height: 27px;\n    overflow: hidden;\n    padding: 0 4px 0 5px; }\n  .dg li.folder {\n    padding: 0;\n    border-left: 4px solid transparent; }\n  .dg li.title {\n    cursor: pointer;\n    margin-left: -4px; }\n  .dg .closed li:not(.title),\n  .dg .closed ul li,\n  .dg .closed ul li > * {\n    height: 0;\n    overflow: hidden;\n    border: 0; }\n  .dg .cr {\n    clear: both;\n    padding-left: 3px;\n    height: 27px; }\n  .dg .property-name {\n    cursor: default;\n    float: left;\n    clear: left;\n    width: 40%;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .dg .c {\n    float: left;\n    width: 60%; }\n  .dg .c input[type=text] {\n    border: 0;\n    margin-top: 4px;\n    padding: 3px;\n    width: 100%;\n    float: right; }\n  .dg .has-slider input[type=text] {\n    width: 30%;\n    /*display: none;*/\n    margin-left: 0; }\n  .dg .slider {\n    float: left;\n    width: 66%;\n    margin-left: -5px;\n    margin-right: 0;\n    height: 19px;\n    margin-top: 4px; }\n  .dg .slider-fg {\n    height: 100%; }\n  .dg .c input[type=checkbox] {\n    margin-top: 9px; }\n  .dg .c select {\n    margin-top: 5px; }\n  .dg .cr.function,\n  .dg .cr.function .property-name, .dg .cr.function *,\n  .dg .cr.boolean,\n  .dg .cr.boolean * {\n    cursor: pointer; }\n  .dg .selector {\n    display: none;\n    position: absolute;\n    margin-left: -9px;\n    margin-top: 23px;\n    z-index: 10; }\n  .dg .c:hover .selector,\n  .dg .selector.drag {\n    display: block; }\n  .dg li.save-row {\n    padding: 0; }\n    .dg li.save-row .button {\n      display: inline-block;\n      padding: 0px 6px; }\n  .dg.dialogue {\n    background-color: #222;\n    width: 460px;\n    padding: 15px;\n    font-size: 13px;\n    line-height: 15px; }\n\n/* TODO Separate style and structure */\n#dg-new-constructor {\n  padding: 10px;\n  color: #222;\n  font-family: Monaco, monospace;\n  font-size: 10px;\n  border: 0;\n  resize: none;\n  box-shadow: inset 1px 1px 1px #888;\n  word-wrap: break-word;\n  margin: 12px 0;\n  display: block;\n  width: 440px;\n  overflow-y: scroll;\n  height: 100px;\n  position: relative; }\n\n#dg-local-explain {\n  display: none;\n  font-size: 11px;\n  line-height: 17px;\n  border-radius: 3px;\n  background-color: #333;\n  padding: 8px;\n  margin-top: 10px; }\n  #dg-local-explain code {\n    font-size: 10px; }\n\n#dat-gui-save-locally {\n  display: none; }\n\n/** Main type */\n.dg {\n  color: #eee;\n  font: 11px 'Lucida Grande', sans-serif;\n  text-shadow: 0 -1px 0 #111;\n  /** Auto place */\n  /* Controller row, <li> */\n  /** Controllers */ }\n  .dg.main {\n    /** Scrollbar */ }\n    .dg.main::-webkit-scrollbar {\n      width: 5px;\n      background: #1a1a1a; }\n    .dg.main::-webkit-scrollbar-corner {\n      height: 0;\n      display: none; }\n    .dg.main::-webkit-scrollbar-thumb {\n      border-radius: 5px;\n      background: #676767; }\n  .dg li:not(.folder) {\n    background: #1a1a1a;\n    border-bottom: 1px solid #2c2c2c; }\n  .dg li.save-row {\n    line-height: 25px;\n    background: #dad5cb;\n    border: 0; }\n    .dg li.save-row select {\n      margin-left: 5px;\n      width: 108px; }\n    .dg li.save-row .button {\n      margin-left: 5px;\n      margin-top: 1px;\n      border-radius: 2px;\n      font-size: 9px;\n      line-height: 7px;\n      padding: 4px 4px 5px 4px;\n      background: #c5bdad;\n      color: #fff;\n      text-shadow: 0 1px 0 #b0a58f;\n      box-shadow: 0 -1px 0 #b0a58f;\n      cursor: pointer; }\n      .dg li.save-row .button.gears {\n        background: #c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;\n        height: 7px;\n        width: 8px; }\n      .dg li.save-row .button:hover {\n        background-color: #bab19e;\n        box-shadow: 0 -1px 0 #b0a58f; }\n  .dg li.folder {\n    border-bottom: 0; }\n  .dg li.title {\n    padding-left: 16px;\n    background: #000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;\n    cursor: pointer;\n    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }\n  .dg .closed li.title {\n    background-image: url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==); }\n  .dg .cr.boolean {\n    border-left: 3px solid #806787; }\n  .dg .cr.color {\n    border-left: 3px solid; }\n  .dg .cr.function {\n    border-left: 3px solid #e61d5f; }\n  .dg .cr.number {\n    border-left: 3px solid #2FA1D6; }\n    .dg .cr.number input[type=text] {\n      color: #2FA1D6; }\n  .dg .cr.string {\n    border-left: 3px solid #1ed36f; }\n    .dg .cr.string input[type=text] {\n      color: #1ed36f; }\n  .dg .cr.function:hover,\n  .dg .cr.boolean:hover {\n    background: #111; }\n  .dg .c input[type=text] {\n    background: #303030;\n    outline: none; }\n    .dg .c input[type=text]:hover {\n      background: #3c3c3c; }\n    .dg .c input[type=text]:focus {\n      background: #494949;\n      color: #fff; }\n  .dg .c .slider {\n    background: #303030;\n    cursor: ew-resize; }\n  .dg .c .slider-fg {\n    background: #2FA1D6; }\n  .dg .c .slider:hover {\n    background: #3c3c3c; }\n    .dg .c .slider:hover .slider-fg {\n      background: #44abda; }\n", ""]);
-	
-	// exports
-
-
-/***/ },
-/* 26 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/**
 	 * dat-gui JavaScript Controller Library
 	 * http://code.google.com/p/dat-gui
@@ -4144,11 +3886,42 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.apache.org/licenses/LICENSE-2.0
 	 */
 	
+	module.exports = {
+	  load: function load(url, indoc) {
+	    var doc = indoc || document;
+	    var link = doc.createElement('link');
+	    link.type = 'text/css';
+	    link.rel = 'stylesheet';
+	    link.href = url;
+	    doc.getElementsByTagName('head')[0].appendChild(link);
+	  },
+	
+	  inject: function inject(css, indoc) {
+	    var doc = indoc || document;
+	    var injected = document.createElement('style');
+	    injected.type = 'text/css';
+	    injected.innerHTML = css;
+	    var head = doc.getElementsByTagName('head')[0];
+	    try {
+	      head.appendChild(injected);
+	    } catch (e) {// Unable to inject CSS, probably because of a Content Security Policy
+	    }
+	  }
+	};
+
+/***/ },
+/* 19 */
+/***/ function(module, exports) {
+
+	module.exports = "<div id=\"dg-save\" class=\"dg dialogue\">\n\n  Here's the new load parameter for your <code>GUI</code>'s constructor:\n\n  <textarea id=\"dg-new-constructor\"></textarea>\n\n  <div id=\"dg-save-locally\">\n\n    <input id=\"dg-local-storage\" type=\"checkbox\"/> Automatically save\n    values to <code>localStorage</code> on exit.\n\n    <div id=\"dg-local-explain\">The values saved to <code>localStorage</code> will\n      override those passed to <code>dat.GUI</code>'s constructor. This makes it\n      easier to work incrementally, but <code>localStorage</code> is fragile,\n      and your friends may not see the same values you do.\n\n    </div>\n\n  </div>\n\n</div>";
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	
 	exports.__esModule = true;
-	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
 	
 	var _OptionController = __webpack_require__(10);
 	
@@ -4166,7 +3939,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _StringController2 = _interopRequireDefault(_StringController);
 	
-	var _FunctionController = __webpack_require__(20);
+	var _FunctionController = __webpack_require__(15);
 	
 	var _FunctionController2 = _interopRequireDefault(_FunctionController);
 	
@@ -4174,84 +3947,75 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	var _BooleanController2 = _interopRequireDefault(_BooleanController);
 	
-	var _utilsCommon = __webpack_require__(5);
+	var _common = __webpack_require__(5);
 	
-	var _utilsCommon2 = _interopRequireDefault(_utilsCommon);
+	var _common2 = _interopRequireDefault(_common);
+	
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
 	var ControllerFactory = function ControllerFactory(object, property) {
 	  var initialValue = object[property];
 	
 	  // Providing options?
-	  if (_utilsCommon2['default'].isArray(arguments[2]) || _utilsCommon2['default'].isObject(arguments[2])) {
-	    return new _OptionController2['default'](object, property, arguments[2]);
+	  if (_common2.default.isArray(arguments[2]) || _common2.default.isObject(arguments[2])) {
+	    return new _OptionController2.default(object, property, arguments[2]);
 	  }
 	
 	  // Providing a map?
-	  if (_utilsCommon2['default'].isNumber(initialValue)) {
-	    if (_utilsCommon2['default'].isNumber(arguments[2]) && _utilsCommon2['default'].isNumber(arguments[3])) {
-	      // Has min and max.
-	      if (_utilsCommon2['default'].isNumber(arguments[4])) {
-	        // has step
-	        return new _NumberControllerSlider2['default'](object, property, arguments[2], arguments[3], arguments[4]);
+	  if (_common2.default.isNumber(initialValue)) {
+	    // Has min and max? (slider)
+	    if (_common2.default.isNumber(arguments[2]) && _common2.default.isNumber(arguments[3])) {
+	      // has step?
+	      if (_common2.default.isNumber(arguments[4])) {
+	        return new _NumberControllerSlider2.default(object, property, arguments[2], arguments[3], arguments[4]);
 	      }
 	
-	      return new _NumberControllerSlider2['default'](object, property, arguments[2], arguments[3]);
+	      return new _NumberControllerSlider2.default(object, property, arguments[2], arguments[3]);
 	    }
-	    return new _NumberControllerBox2['default'](object, property, { min: arguments[2], max: arguments[3] });
+	
+	    // number box
+	    if (_common2.default.isNumber(arguments[4])) {
+	      // has step
+	      return new _NumberControllerBox2.default(object, property, { min: arguments[2], max: arguments[3], step: arguments[4] });
+	    }
+	    return new _NumberControllerBox2.default(object, property, { min: arguments[2], max: arguments[3] });
 	  }
 	
-	  if (_utilsCommon2['default'].isString(initialValue)) {
-	    return new _StringController2['default'](object, property);
+	  if (_common2.default.isString(initialValue)) {
+	    return new _StringController2.default(object, property);
 	  }
 	
-	  if (_utilsCommon2['default'].isFunction(initialValue)) {
-	    return new _FunctionController2['default'](object, property, '');
+	  if (_common2.default.isFunction(initialValue)) {
+	    return new _FunctionController2.default(object, property, '');
 	  }
 	
-	  if (_utilsCommon2['default'].isBoolean(initialValue)) {
-	    return new _BooleanController2['default'](object, property);
+	  if (_common2.default.isBoolean(initialValue)) {
+	    return new _BooleanController2.default(object, property);
 	  }
-	};
 	
-	exports['default'] = ControllerFactory;
-	module.exports = exports['default'];
+	  return null;
+	}; /**
+	    * dat-gui JavaScript Controller Library
+	    * http://code.google.com/p/dat-gui
+	    *
+	    * Copyright 2011 Data Arts Team, Google Creative Lab
+	    *
+	    * Licensed under the Apache License, Version 2.0 (the "License");
+	    * you may not use this file except in compliance with the License.
+	    * You may obtain a copy of the License at
+	    *
+	    * http://www.apache.org/licenses/LICENSE-2.0
+	    */
+	
+	exports.default = ControllerFactory;
 
 /***/ },
-/* 27 */
+/* 21 */
 /***/ function(module, exports) {
 
-	/**
-	 * dat-gui JavaScript Controller Library
-	 * http://code.google.com/p/dat-gui
-	 *
-	 * Copyright 2011 Data Arts Team, Google Creative Lab
-	 *
-	 * Licensed under the Apache License, Version 2.0 (the "License");
-	 * you may not use this file except in compliance with the License.
-	 * You may obtain a copy of the License at
-	 *
-	 * http://www.apache.org/licenses/LICENSE-2.0
-	 */
-	
 	"use strict";
 	
 	exports.__esModule = true;
-	
-	exports["default"] = function () {
-	  function requestAnimationFrame(callback) {
-	    // TODO: Get rid of window
-	    window.setTimeout(callback, 1000 / 60);
-	  }
-	
-	  return window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || requestAnimationFrame;
-	};
-	
-	module.exports = exports["default"];
-
-/***/ },
-/* 28 */
-/***/ function(module, exports, __webpack_require__) {
-
 	/**
 	 * dat-gui JavaScript Controller Library
 	 * http://code.google.com/p/dat-gui
@@ -4265,28 +4029,49 @@ return /******/ (function(modules) { // webpackBootstrap
 	 * http://www.apache.org/licenses/LICENSE-2.0
 	 */
 	
+	function requestAnimationFrame(callback) {
+	  setTimeout(callback, 1000 / 60);
+	}
+	
+	exports.default = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || requestAnimationFrame;
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
 	'use strict';
 	
 	exports.__esModule = true;
 	
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { 'default': obj }; }
+	var _dom = __webpack_require__(9);
 	
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
+	var _dom2 = _interopRequireDefault(_dom);
 	
-	var _domDom = __webpack_require__(9);
+	var _common = __webpack_require__(5);
 	
-	var _domDom2 = _interopRequireDefault(_domDom);
+	var _common2 = _interopRequireDefault(_common);
 	
-	var _utilsCommon = __webpack_require__(5);
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 	
-	var _utilsCommon2 = _interopRequireDefault(_utilsCommon);
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } } /**
+	                                                                                                                                                           * dat-gui JavaScript Controller Library
+	                                                                                                                                                           * http://code.google.com/p/dat-gui
+	                                                                                                                                                           *
+	                                                                                                                                                           * Copyright 2011 Data Arts Team, Google Creative Lab
+	                                                                                                                                                           *
+	                                                                                                                                                           * Licensed under the Apache License, Version 2.0 (the "License");
+	                                                                                                                                                           * you may not use this file except in compliance with the License.
+	                                                                                                                                                           * You may obtain a copy of the License at
+	                                                                                                                                                           *
+	                                                                                                                                                           * http://www.apache.org/licenses/LICENSE-2.0
+	                                                                                                                                                           */
 	
-	var CenteredDiv = (function () {
+	var CenteredDiv = function () {
 	  function CenteredDiv() {
 	    _classCallCheck(this, CenteredDiv);
 	
 	    this.backgroundElement = document.createElement('div');
-	    _utilsCommon2['default'].extend(this.backgroundElement.style, {
+	    _common2.default.extend(this.backgroundElement.style, {
 	      backgroundColor: 'rgba(0,0,0,0.8)',
 	      top: 0,
 	      left: 0,
@@ -4297,11 +4082,11 @@ return /******/ (function(modules) { // webpackBootstrap
 	      transition: 'opacity 0.2s linear'
 	    });
 	
-	    _domDom2['default'].makeFullscreen(this.backgroundElement);
+	    _dom2.default.makeFullscreen(this.backgroundElement);
 	    this.backgroundElement.style.position = 'fixed';
 	
 	    this.domElement = document.createElement('div');
-	    _utilsCommon2['default'].extend(this.domElement.style, {
+	    _common2.default.extend(this.domElement.style, {
 	      position: 'fixed',
 	      display: 'none',
 	      zIndex: '1001',
@@ -4314,7 +4099,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	    document.body.appendChild(this.domElement);
 	
 	    var _this = this;
-	    _domDom2['default'].bind(this.backgroundElement, 'click', function () {
+	    _dom2.default.bind(this.backgroundElement, 'click', function () {
 	      _this.hide();
 	    });
 	  }
@@ -4331,7 +4116,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	
 	    this.layout();
 	
-	    _utilsCommon2['default'].defer(function () {
+	    _common2.default.defer(function () {
 	      _this.backgroundElement.style.opacity = 1;
 	      _this.domElement.style.opacity = 1;
 	      _this.domElement.style.webkitTransform = 'scale(1)';
@@ -4342,6 +4127,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	   * Hide centered div
 	   */
 	
+	
 	  CenteredDiv.prototype.hide = function hide() {
 	    var _this = this;
 	
@@ -4349,14 +4135,14 @@ return /******/ (function(modules) { // webpackBootstrap
 	      _this.domElement.style.display = 'none';
 	      _this.backgroundElement.style.display = 'none';
 	
-	      _domDom2['default'].unbind(_this.domElement, 'webkitTransitionEnd', hide);
-	      _domDom2['default'].unbind(_this.domElement, 'transitionend', hide);
-	      _domDom2['default'].unbind(_this.domElement, 'oTransitionEnd', hide);
+	      _dom2.default.unbind(_this.domElement, 'webkitTransitionEnd', hide);
+	      _dom2.default.unbind(_this.domElement, 'transitionend', hide);
+	      _dom2.default.unbind(_this.domElement, 'oTransitionEnd', hide);
 	    };
 	
-	    _domDom2['default'].bind(this.domElement, 'webkitTransitionEnd', hide);
-	    _domDom2['default'].bind(this.domElement, 'transitionend', hide);
-	    _domDom2['default'].bind(this.domElement, 'oTransitionEnd', hide);
+	    _dom2.default.bind(this.domElement, 'webkitTransitionEnd', hide);
+	    _dom2.default.bind(this.domElement, 'transitionend', hide);
+	    _dom2.default.bind(this.domElement, 'oTransitionEnd', hide);
 	
 	    this.backgroundElement.style.opacity = 0;
 	    //    this.domElement.style.top = '48%';
@@ -4365,15 +4151,84 @@ return /******/ (function(modules) { // webpackBootstrap
 	  };
 	
 	  CenteredDiv.prototype.layout = function layout() {
-	    this.domElement.style.left = window.innerWidth / 2 - _domDom2['default'].getWidth(this.domElement) / 2 + 'px';
-	    this.domElement.style.top = window.innerHeight / 2 - _domDom2['default'].getHeight(this.domElement) / 2 + 'px';
+	    this.domElement.style.left = window.innerWidth / 2 - _dom2.default.getWidth(this.domElement) / 2 + 'px';
+	    this.domElement.style.top = window.innerHeight / 2 - _dom2.default.getHeight(this.domElement) / 2 + 'px';
 	  };
 	
 	  return CenteredDiv;
-	})();
+	}();
 	
-	exports['default'] = CenteredDiv;
-	module.exports = exports['default'];
+	exports.default = CenteredDiv;
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	exports = module.exports = __webpack_require__(24)();
+	// imports
+	
+	
+	// module
+	exports.push([module.id, ".dg {\n  /** Clear list styles */\n  /* Auto-place container */\n  /* Auto-placed GUI's */\n  /* Line items that don't contain folders. */\n  /** Folder names */\n  /** Hides closed items */\n  /** Controller row */\n  /** Name-half (left) */\n  /** Controller-half (right) */\n  /** Controller placement */\n  /** Shorter number boxes when slider is present. */\n  /** Ensure the entire boolean and function row shows a hand */ }\n  .dg ul {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n    width: 100%;\n    clear: both; }\n  .dg.ac {\n    position: fixed;\n    top: 0;\n    left: 0;\n    right: 0;\n    height: 0;\n    z-index: 0; }\n  .dg:not(.ac) .main {\n    /** Exclude mains in ac so that we don't hide close button */\n    overflow: hidden; }\n  .dg.main {\n    -webkit-transition: opacity 0.1s linear;\n    -o-transition: opacity 0.1s linear;\n    -moz-transition: opacity 0.1s linear;\n    transition: opacity 0.1s linear; }\n    .dg.main.taller-than-window {\n      overflow-y: auto; }\n      .dg.main.taller-than-window .close-button {\n        opacity: 1;\n        /* TODO, these are style notes */\n        margin-top: -1px;\n        border-top: 1px solid #2c2c2c; }\n    .dg.main ul.closed .close-button {\n      opacity: 1 !important; }\n    .dg.main:hover .close-button,\n    .dg.main .close-button.drag {\n      opacity: 1; }\n    .dg.main .close-button {\n      /*opacity: 0;*/\n      -webkit-transition: opacity 0.1s linear;\n      -o-transition: opacity 0.1s linear;\n      -moz-transition: opacity 0.1s linear;\n      transition: opacity 0.1s linear;\n      border: 0;\n      position: absolute;\n      line-height: 19px;\n      height: 20px;\n      /* TODO, these are style notes */\n      cursor: pointer;\n      text-align: center;\n      background-color: #000; }\n      .dg.main .close-button:hover {\n        background-color: #111; }\n  .dg.a {\n    float: right;\n    margin-right: 15px;\n    overflow-x: hidden; }\n    .dg.a.has-save > ul {\n      margin-top: 27px; }\n      .dg.a.has-save > ul.closed {\n        margin-top: 0; }\n    .dg.a .save-row {\n      position: fixed;\n      top: 0;\n      z-index: 1002; }\n  .dg li {\n    -webkit-transition: height 0.1s ease-out;\n    -o-transition: height 0.1s ease-out;\n    -moz-transition: height 0.1s ease-out;\n    transition: height 0.1s ease-out; }\n  .dg li:not(.folder) {\n    cursor: auto;\n    height: 27px;\n    line-height: 27px;\n    overflow: hidden;\n    padding: 0 4px 0 5px; }\n  .dg li.folder {\n    padding: 0;\n    border-left: 4px solid transparent; }\n  .dg li.title {\n    cursor: pointer;\n    margin-left: -4px; }\n  .dg .closed li:not(.title),\n  .dg .closed ul li,\n  .dg .closed ul li > * {\n    height: 0;\n    overflow: hidden;\n    border: 0; }\n  .dg .cr {\n    clear: both;\n    padding-left: 3px;\n    height: 27px; }\n  .dg .property-name {\n    cursor: default;\n    float: left;\n    clear: left;\n    width: 40%;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n  .dg .c {\n    float: left;\n    width: 60%; }\n  .dg .c input[type=text] {\n    border: 0;\n    margin-top: 4px;\n    padding: 3px;\n    width: 100%;\n    float: right; }\n  .dg .has-slider input[type=text] {\n    width: 30%;\n    /*display: none;*/\n    margin-left: 0; }\n  .dg .slider {\n    float: left;\n    width: 66%;\n    margin-left: -5px;\n    margin-right: 0;\n    height: 19px;\n    margin-top: 4px; }\n  .dg .slider-fg {\n    height: 100%; }\n  .dg .c input[type=checkbox] {\n    margin-top: 9px; }\n  .dg .c select {\n    margin-top: 5px; }\n  .dg .cr.function,\n  .dg .cr.function .property-name,\n  .dg .cr.function *,\n  .dg .cr.boolean,\n  .dg .cr.boolean * {\n    cursor: pointer; }\n  .dg .selector {\n    display: none;\n    position: absolute;\n    margin-left: -9px;\n    margin-top: 23px;\n    z-index: 10; }\n  .dg .c:hover .selector,\n  .dg .selector.drag {\n    display: block; }\n  .dg li.save-row {\n    padding: 0; }\n    .dg li.save-row .button {\n      display: inline-block;\n      padding: 0px 6px; }\n  .dg.dialogue {\n    background-color: #222;\n    width: 460px;\n    padding: 15px;\n    font-size: 13px;\n    line-height: 15px; }\n\n/* TODO Separate style and structure */\n#dg-new-constructor {\n  padding: 10px;\n  color: #222;\n  font-family: Monaco, monospace;\n  font-size: 10px;\n  border: 0;\n  resize: none;\n  box-shadow: inset 1px 1px 1px #888;\n  word-wrap: break-word;\n  margin: 12px 0;\n  display: block;\n  width: 440px;\n  overflow-y: scroll;\n  height: 100px;\n  position: relative; }\n\n#dg-local-explain {\n  display: none;\n  font-size: 11px;\n  line-height: 17px;\n  border-radius: 3px;\n  background-color: #333;\n  padding: 8px;\n  margin-top: 10px; }\n  #dg-local-explain code {\n    font-size: 10px; }\n\n#dat-gui-save-locally {\n  display: none; }\n\n/** Main type */\n.dg {\n  color: #eee;\n  font: 11px 'Lucida Grande', sans-serif;\n  text-shadow: 0 -1px 0 #111;\n  /** Auto place */\n  /* Controller row, <li> */\n  /** Controllers */ }\n  .dg.main {\n    /** Scrollbar */ }\n    .dg.main::-webkit-scrollbar {\n      width: 5px;\n      background: #1a1a1a; }\n    .dg.main::-webkit-scrollbar-corner {\n      height: 0;\n      display: none; }\n    .dg.main::-webkit-scrollbar-thumb {\n      border-radius: 5px;\n      background: #676767; }\n  .dg li:not(.folder) {\n    background: #1a1a1a;\n    border-bottom: 1px solid #2c2c2c; }\n  .dg li.save-row {\n    line-height: 25px;\n    background: #dad5cb;\n    border: 0; }\n    .dg li.save-row select {\n      margin-left: 5px;\n      width: 108px; }\n    .dg li.save-row .button {\n      margin-left: 5px;\n      margin-top: 1px;\n      border-radius: 2px;\n      font-size: 9px;\n      line-height: 7px;\n      padding: 4px 4px 5px 4px;\n      background: #c5bdad;\n      color: #fff;\n      text-shadow: 0 1px 0 #b0a58f;\n      box-shadow: 0 -1px 0 #b0a58f;\n      cursor: pointer; }\n      .dg li.save-row .button.gears {\n        background: #c5bdad url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAANCAYAAAB/9ZQ7AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAQJJREFUeNpiYKAU/P//PwGIC/ApCABiBSAW+I8AClAcgKxQ4T9hoMAEUrxx2QSGN6+egDX+/vWT4e7N82AMYoPAx/evwWoYoSYbACX2s7KxCxzcsezDh3evFoDEBYTEEqycggWAzA9AuUSQQgeYPa9fPv6/YWm/Acx5IPb7ty/fw+QZblw67vDs8R0YHyQhgObx+yAJkBqmG5dPPDh1aPOGR/eugW0G4vlIoTIfyFcA+QekhhHJhPdQxbiAIguMBTQZrPD7108M6roWYDFQiIAAv6Aow/1bFwXgis+f2LUAynwoIaNcz8XNx3Dl7MEJUDGQpx9gtQ8YCueB+D26OECAAQDadt7e46D42QAAAABJRU5ErkJggg==) 2px 1px no-repeat;\n        height: 7px;\n        width: 8px; }\n      .dg li.save-row .button:hover {\n        background-color: #bab19e;\n        box-shadow: 0 -1px 0 #b0a58f; }\n  .dg li.folder {\n    border-bottom: 0; }\n  .dg li.title {\n    padding-left: 16px;\n    background: #000 url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlI+hKgFxoCgAOw==) 6px 10px no-repeat;\n    cursor: pointer;\n    border-bottom: 1px solid rgba(255, 255, 255, 0.2); }\n  .dg .closed li.title {\n    background-image: url(data:image/gif;base64,R0lGODlhBQAFAJEAAP////Pz8////////yH5BAEAAAIALAAAAAAFAAUAAAIIlGIWqMCbWAEAOw==); }\n  .dg .cr.boolean {\n    border-left: 3px solid #806787; }\n  .dg .cr.color {\n    border-left: 3px solid; }\n  .dg .cr.function {\n    border-left: 3px solid #e61d5f; }\n  .dg .cr.number {\n    border-left: 3px solid #2FA1D6; }\n    .dg .cr.number input[type=text] {\n      color: #2FA1D6; }\n  .dg .cr.string {\n    border-left: 3px solid #1ed36f; }\n    .dg .cr.string input[type=text] {\n      color: #1ed36f; }\n  .dg .cr.function:hover, .dg .cr.boolean:hover {\n    background: #111; }\n  .dg .c input[type=text] {\n    background: #303030;\n    outline: none; }\n    .dg .c input[type=text]:hover {\n      background: #3c3c3c; }\n    .dg .c input[type=text]:focus {\n      background: #494949;\n      color: #fff; }\n  .dg .c .slider {\n    background: #303030;\n    cursor: ew-resize; }\n  .dg .c .slider-fg {\n    background: #2FA1D6;\n    max-width: 100%; }\n  .dg .c .slider:hover {\n    background: #3c3c3c; }\n    .dg .c .slider:hover .slider-fg {\n      background: #44abda; }\n", ""]);
+	
+	// exports
+
+
+/***/ },
+/* 24 */
+/***/ function(module, exports) {
+
+	/*
+		MIT License http://www.opensource.org/licenses/mit-license.php
+		Author Tobias Koppers @sokra
+	*/
+	// css base code, injected by the css-loader
+	module.exports = function() {
+		var list = [];
+	
+		// return the list of modules as css string
+		list.toString = function toString() {
+			var result = [];
+			for(var i = 0; i < this.length; i++) {
+				var item = this[i];
+				if(item[2]) {
+					result.push("@media " + item[2] + "{" + item[1] + "}");
+				} else {
+					result.push(item[1]);
+				}
+			}
+			return result.join("");
+		};
+	
+		// import a list of modules into the list
+		list.i = function(modules, mediaQuery) {
+			if(typeof modules === "string")
+				modules = [[null, modules, ""]];
+			var alreadyImportedModules = {};
+			for(var i = 0; i < this.length; i++) {
+				var id = this[i][0];
+				if(typeof id === "number")
+					alreadyImportedModules[id] = true;
+			}
+			for(i = 0; i < modules.length; i++) {
+				var item = modules[i];
+				// skip already imported module
+				// this implementation is not 100% perfect for weird media query combinations
+				//  when a module is imported multiple times with different media queries.
+				//  I hope this will never occur (Hey this way we have smaller bundles)
+				if(typeof item[0] !== "number" || !alreadyImportedModules[item[0]]) {
+					if(mediaQuery && !item[2]) {
+						item[2] = mediaQuery;
+					} else if(mediaQuery) {
+						item[2] = "(" + item[2] + ") and (" + mediaQuery + ")";
+					}
+					list.push(item);
+				}
+			}
+		};
+		return list;
+	};
+
 
 /***/ }
 /******/ ])
