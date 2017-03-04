@@ -50,3 +50,8 @@ Issues
   ```css
   .dg .slider { width: 60% !important }
   ```
+
+Thanks
+------
+
+[Demo](https://samme.github.io/phaser-plugin-game-gui/) sound effects by Eric Matyas [www.soundimage.org](http://www.soundimage.org)
