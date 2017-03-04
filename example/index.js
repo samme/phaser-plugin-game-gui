@@ -6,16 +6,26 @@
   Phaser = this.Phaser;
 
   window.GAME = new Phaser.Game({
+    scaleMode: Phaser.ScaleManager.RESIZE,
     state: {
-      init: function() {},
+      init: function() {
+        this.scale.fullScreenScaleMode = Phaser.ScaleManager.RESIZE;
+      },
       preload: function() {
-        this.load.baseURL = "http://examples.phaser.io/assets/";
-        this.load.crossOrigin = "anonymous";
-        this.load.image("backdrop", "pics/remember-me.jpg");
-        this.load.image("hotdog", "sprites/hotdog.png");
+        this.load.path = "example/assets/";
+        this.load.audio("loop", ["loop.mp3", "loop.ogg"]);
+        this.load.image("backdrop", "backdrop.jpg");
+        this.load.image("hotdog");
+        this.load.image("cloud");
+        this.bar = this.add.text(0, 0, "..........", {
+          fill: "white",
+          font: "32px monospace"
+        }).alignIn(this.camera.view, Phaser.CENTER);
+        this.load.setPreloadSprite(this.bar);
       },
       create: function() {
-        var hotdog, i, len, ref, scale;
+        var bounds, cloud, hotdog, i, j, len, len1, ref, ref1, scale;
+        this.bar.destroy();
         this.world.setBounds(0, 0, 1920, 1200);
         this.camera.focusOnXY(this.world.centerX, 0);
         if (!this.gameGuiPlugin) {
@@ -24,26 +34,59 @@
           });
         }
         this.add.image(0, 0, "backdrop");
+        bounds = this.world.bounds;
         this.hotdogs = this.add.physicsGroup();
-        ref = this.hotdogs.createMultiple(10, "hotdog", 0, true);
+        ref = this.hotdogs.createMultiple(20, "hotdog", 0, true);
         for (i = 0, len = ref.length; i < len; i++) {
           hotdog = ref[i];
-          hotdog.position.set(this.world.randomX, this.world.randomY);
-          scale = this.rnd.realInRange(0.25, 0.75);
+          hotdog.position.set(this.world.randomX + bounds.width, this.world.randomY);
+          scale = Math.pow(this.rnd.realInRange(0.25, 1), 2);
           hotdog.scale.set(scale);
           hotdog.body.velocity.x = scale * -100;
+          hotdog.tint = ~~(15 * (0.5 + scale / 2)) * 0x111111;
         }
+        this.hotdogs.customSort(function(a, b) {
+          return a.scale.x - b.scale.x;
+        });
+        this.clouds = this.add.group();
+        this.clouds.x = bounds.halfWidth;
+        ref1 = this.clouds.createMultiple(20, "cloud", 0, true);
+        for (j = 0, len1 = ref1.length; j < len1; j++) {
+          cloud = ref1[j];
+          cloud.anchor.set(0.5);
+          cloud.scale.set(this.rnd.realInRange(2, 8));
+          cloud.x = this.world.randomX - bounds.halfWidth;
+          cloud.y = this.world.randomY / 2 + bounds.halfHeight;
+        }
+        this.add.tween(this.clouds.scale).to({
+          x: 2,
+          y: 2
+        }, 30000, "Linear", true);
+        this.caption = this.add.text(0, 0, "Sound Effects by Eric Matyas www.soundimage.org", {
+          fill: "white",
+          font: "bold 14px sans-serif"
+        }).alignIn(this.world.bounds, Phaser.BOTTOM_LEFT, -10, -30);
+        this.loop = this.add.audio("loop");
+        this.loop.onDecoded.add(this.startLoop, this);
       },
       update: function() {
-        var hotdog, i, len, ref;
-        ref = this.hotdogs.children;
-        for (i = 0, len = ref.length; i < len; i++) {
-          hotdog = ref[i];
-          this.world.wrap(hotdog, 230);
+        var hotdog, i, left, len, ref, ref1, right;
+        ref = this.world.bounds, left = ref.left, right = ref.right;
+        ref1 = this.hotdogs.children;
+        for (i = 0, len = ref1.length; i < len; i++) {
+          hotdog = ref1[i];
+          if (hotdog.right < left) {
+            hotdog.left = right;
+            hotdog.y = this.world.randomY;
+          }
         }
       },
       render: function() {},
-      shutdown: function() {}
+      shutdown: function() {},
+      startLoop: function() {
+        this.loop.fadeIn(5000);
+        this.loop.loopFull();
+      }
     }
   });
 
