@@ -14,9 +14,9 @@ rules:
     - allow:
       - warn
   no-shadow:
-    - warn # normal for class GameGuiPlugin
+    - error
   no-unused-vars:
-    - warn # normal for class GameGuiPlugin
+    - error
   quotes:
     - warn
     - double

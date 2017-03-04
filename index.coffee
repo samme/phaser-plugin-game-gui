@@ -82,7 +82,7 @@ PROPS = Object.freeze
       alpha: [0, 1, 0.1]
       visible: yes
 
-Phaser.Plugin.GameGui = class GameGuiPlugin extends Phaser.Plugin
+class Phaser.Plugin.GameGui extends Phaser.Plugin
 
   gui: null
 
