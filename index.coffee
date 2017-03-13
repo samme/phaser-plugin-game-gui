@@ -2,6 +2,8 @@
 
 {dat, Phaser} = this
 
+# {Arcade} = Phaser.Physics
+
 {isArray} = Array
 
 if Phaser.ScaleManager
@@ -55,6 +57,28 @@ PROPS = Object.freeze
         enabled: yes
       touch:
         enabled: yes
+    physics:
+      arcade:
+        checkCollision:
+          down: yes
+          left: yes
+          right: yes
+          up: yes
+        forceX: yes
+        gravity:
+          x: [-1000, 1000, 10]
+          y: [-1000, 1000, 10]
+        isPaused: yes
+        OVERLAP_BIAS: [-16, 16, 1]
+        skipQuadTree: yes
+        # TODO
+        # sortDirection: [
+        #   BOTTOM_TOP: Arcade.BOTTOM_TOP
+        #   LEFT_RIGHT: Arcade.LEFT_RIGHT
+        #   RIGHT_LEFT: Arcade.RIGHT_LEFT
+        #   TOP_BOTTOM: Arcade.TOP_BOTTOM
+        #   SORT_NONE:  Arcade.SORT_NONE
+        # ]
     scale:
       fullScreenScaleMode: addScaleMode
       parentIsWindow: yes

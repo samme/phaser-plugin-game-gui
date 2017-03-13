@@ -76,6 +76,24 @@
           enabled: true
         }
       },
+      physics: {
+        arcade: {
+          checkCollision: {
+            down: true,
+            left: true,
+            right: true,
+            up: true
+          },
+          forceX: true,
+          gravity: {
+            x: [-1000, 1000, 10],
+            y: [-1000, 1000, 10]
+          },
+          isPaused: true,
+          OVERLAP_BIAS: [-16, 16, 1],
+          skipQuadTree: true
+        }
+      },
       scale: {
         fullScreenScaleMode: addScaleMode,
         parentIsWindow: true,
@@ -99,7 +117,7 @@
         restart: true
       },
       time: {
-        desiredFps: [10, 60, 5],
+        desiredFps: [10, 120, 5],
         slowMotion: [0.1, 10, 0.1]
       },
       tweens: {
