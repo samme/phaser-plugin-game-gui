@@ -72,7 +72,7 @@ PROPS = Object.freeze
     state:
       restart: yes
     time:
-      desiredFps: [10, 60, 5]
+      desiredFps: [10, 120, 5]
       slowMotion: [0.1, 10, 0.1]
     tweens:
       frameBased: yes
