@@ -2,25 +2,36 @@
 
 {dat, Phaser} = this
 
-# {Arcade} = Phaser.Physics
+{ScaleManager} = Phaser
+
+{Arcade} = Phaser.Physics
 
 {isArray} = Array
 
-if Phaser.ScaleManager
-  {EXACT_FIT, NO_SCALE, RESIZE, SHOW_ALL, USER_SCALE} = Phaser.ScaleManager
+if ScaleManager
   scaleModes =
-    EXACT_FIT:  EXACT_FIT
-    NO_SCALE:   NO_SCALE
-    RESIZE:     RESIZE
-    SHOW_ALL:   SHOW_ALL
-    USER_SCALE: USER_SCALE
+    "exact fit":  ScaleManager.EXACT_FIT
+    "no scale":   ScaleManager.NO_SCALE
+    "resize":     ScaleManager.RESIZE
+    "show all":   ScaleManager.SHOW_ALL
+    "user scale": ScaleManager.USER_SCALE
 
-addScaleMode = (cn, scale, name) ->
-  controller = cn.add scale, name, scaleModes
-  controller.__onChange = onChangeScaleMode
+addArcadeSortDirection = (cn, arcade, name) ->
+  controller = cn.add arcade, name,
+    "bottom top": Arcade.BOTTOM_TOP
+    "left right": Arcade.LEFT_RIGHT
+    "right left": Arcade.RIGHT_LEFT
+    "top bottom": Arcade.TOP_BOTTOM
+    "sort none":  Arcade.SORT_NONE
+  controller.onChange saveNumericValue
   controller
 
-onChangeScaleMode = (newValue) ->
+addScaleMode = (cn, scaleManager, name) ->
+  controller = cn.add scaleManager, name, scaleModes
+  controller.onChange saveNumericValue
+  controller
+
+saveNumericValue = (newValue) ->
   @object[@property] = Number newValue
   return
 
@@ -71,14 +82,7 @@ PROPS = Object.freeze
         isPaused: yes
         OVERLAP_BIAS: [-16, 16, 1]
         skipQuadTree: yes
-        # TODO
-        # sortDirection: [
-        #   BOTTOM_TOP: Arcade.BOTTOM_TOP
-        #   LEFT_RIGHT: Arcade.LEFT_RIGHT
-        #   RIGHT_LEFT: Arcade.RIGHT_LEFT
-        #   TOP_BOTTOM: Arcade.TOP_BOTTOM
-        #   SORT_NONE:  Arcade.SORT_NONE
-        # ]
+        sortDirection: addArcadeSortDirection
     scale:
       fullScreenScaleMode: addScaleMode
       parentIsWindow: yes
