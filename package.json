@@ -9,7 +9,7 @@
   "scripts": {
     "prestart": "open index.html",
     "start": "coffeebar --watch *.coffee example/*.coffee",
-    "postinstall": "[[ -d ./example ]] && cp -v ./node_modules/dat.gui/build/dat.gui.js ./example",
+    "postinstall": "if [[ -d ./example ]]; then cp -v ./node_modules/dat.gui/build/dat.gui.js ./example; fi;",
     "preversion": "eslint index.js example/index.js",
     "pub": "np --no-cleanup"
   },
