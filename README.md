@@ -40,17 +40,6 @@ gameGuiPlugin.gui.closed = true;
 gameGuiPlugin.gui.destroy();
 ```
 
-Issues
-------
-
-- [Number sliders are hidden](https://github.com/dataarts/dat.gui/issues/124) (dat.gui@0.6.1)
-
-  A workaround:
-
-  ```css
-  .dg .slider { width: 60% !important }
-  ```
-
 Thanks
 ------
 
