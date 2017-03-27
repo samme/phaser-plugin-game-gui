@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/samme/phaser-plugin-game-gui#readme",
   "dependencies": {
-    "dat.gui": "github:dataarts/dat.gui#d5b6178",
+    "dat.gui": "github:dataarts/dat.gui",
     "phaser": "^2.6.2"
   },
   "devDependencies": {
