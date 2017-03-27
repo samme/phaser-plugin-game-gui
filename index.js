@@ -50,11 +50,12 @@
   PROPS = Object.freeze({
     game: {
       clearBeforeRender: true,
+      disableStep: true,
+      enableStep: true,
       forceSingleUpdate: true,
       lockRender: true,
       paused: true,
       step: true,
-      stepping: true,
       camera: {
         fade: true,
         flash: true,

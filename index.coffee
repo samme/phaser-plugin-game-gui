@@ -38,11 +38,12 @@ saveNumericValue = (newValue) ->
 PROPS = Object.freeze
   game:
     clearBeforeRender: yes
+    disableStep: yes
+    enableStep: yes
     forceSingleUpdate: yes
     lockRender: yes
     paused: yes
     step: yes
-    stepping: yes
     camera:
       fade: yes
       flash: yes
