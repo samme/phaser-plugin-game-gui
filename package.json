@@ -1,6 +1,6 @@
 {
   "name": "phaser-plugin-game-gui",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Inspect and manipulate some common game settings",
   "main": "index.js",
   "directories": {
