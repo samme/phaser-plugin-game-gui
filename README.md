@@ -4,13 +4,13 @@
 
 Quick access to some common game settings and commands:
 
-  - pause, frame step
-  - restart
-  - camera effects, position, and lerp
-  - scaleMode
-  - fullScreen
-  - sound mute/volume
-  - slow motion …
+  - Pause and frame-stepping
+  - Restart current state
+  - Camera flash, shake, position, and lerp
+  - Input (keyboard, mouse, touch) toggles
+  - Scale mode, start/stop fullscreen
+  - Sound mute and volume
+  - Slow motion
 
 Install
 -------
@@ -21,8 +21,8 @@ Use
 ---
 
 ```javascript
-// @init or @create:
-// (If you've resized `world` or `camera`, add at the end of @create.)
+// In init() or create():
+// (If you've resized `world` or `camera`, add the plugin **after** those changes.)
 game.plugins.add(Phaser.Plugin.GameGui);
 ```
 
