@@ -8,6 +8,10 @@
 
 {isArray} = Array
 
+clickTrampolineChoices = ["", "when-not-mouse"]
+
+windowConstraintChoices = ["", "layout", "visual"]
+
 if ScaleManager
   scaleModes =
     "exact fit":  ScaleManager.EXACT_FIT
@@ -85,12 +89,25 @@ PROPS = Object.freeze
         skipQuadTree: yes
         sortDirection: addArcadeSortDirection
     scale:
+      compatibility:
+        canExpandParent: yes
+        clickTrampoline: [clickTrampolineChoices]
+        forceMinimumDocumentHeight: yes
+        noMargins: yes
+        orientationFallback: yes
+        # TODO scrollTo
+        supportsFullScreen: yes
       fullScreenScaleMode: addScaleMode
+      pageAlignHorizontally: yes
+      pageAlignVertically: yes
       parentIsWindow: yes
       refresh: yes
       scaleMode: addScaleMode
       startFullScreen: yes
       stopFullScreen: yes
+      windowConstraints:
+        bottom: [windowConstraintChoices]
+        right: [windowConstraintChoices]
     sound:
       mute: yes
       volume: [0, 1, 0.1]
