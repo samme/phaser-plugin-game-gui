@@ -70,6 +70,10 @@ PROPS = Object.freeze
       keyboard:
         enabled: yes
       mouse:
+        capture: yes
+        enabled: yes
+      mspointer: # TODO only if running?
+        capture: yes
         enabled: yes
       touch:
         enabled: yes

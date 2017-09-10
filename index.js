@@ -91,6 +91,11 @@
           enabled: true
         },
         mouse: {
+          capture: true,
+          enabled: true
+        },
+        mspointer: {
+          capture: true,
           enabled: true
         },
         touch: {
