@@ -4,11 +4,18 @@
 <style>
 html, body { height: 100% }
 body { margin: 0; padding: 0; background: #111; color: #eee }
+.caption { position: absolute; left: 0; bottom: 0; padding: 5px 10px; margin: 0; font: caption; color: #eee; background: rgba(0,0,0,0.8) }
+.caption a { color: inherit; }
 .dg { font: caption !important; text-shadow: none !important }
 .dg .property-name { font: small-caption !important; line-height: 27px !important; }
-.dg .slider { width: 60% !important } /* https://github.com/dataarts/dat.gui/issues/124 */
 </style>
 <title>Phaser Game GUI Demo</title>
+<p class="caption">
+  <a href="https://github.com/samme/phaser-plugin-game-gui#readme">Phaser Game GUI plugin</a>
+  (<a href="https://www.npmjs.com/package/phaser-plugin-game-gui" title="NPM package phaser-plugin-game-gui">NPM</a>)
+  |
+  Sound effects by Eric Matyas <a href="http://www.soundimage.org">www.soundimage.org</a>
+</p>
 <script src="example/phaser.js"></script>
 <script src="example/dat.gui.js"></script>
 <script src="index.js"></script>
