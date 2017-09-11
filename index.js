@@ -99,7 +99,8 @@
           enabled: true
         },
         touch: {
-          enabled: true
+          enabled: true,
+          preventDefault: true
         }
       },
       physics: {

@@ -77,6 +77,7 @@ PROPS = Object.freeze
         enabled: yes
       touch:
         enabled: yes
+        preventDefault: yes
     physics:
       arcade:
         checkCollision:
