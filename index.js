@@ -105,6 +105,8 @@
       },
       physics: {
         arcade: {
+          OVERLAP_BIAS: [-16, 16, 1],
+          TILE_BIAS: [-16, 16, 1],
           checkCollision: {
             down: true,
             left: true,
@@ -117,7 +119,6 @@
             y: [-1000, 1000, 10]
           },
           isPaused: true,
-          OVERLAP_BIAS: [-16, 16, 1],
           skipQuadTree: true,
           sortDirection: addArcadeSortDirection
         }

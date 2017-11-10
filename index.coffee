@@ -80,6 +80,8 @@ PROPS = Object.freeze
         preventDefault: yes
     physics:
       arcade:
+        OVERLAP_BIAS: [-16, 16, 1]
+        TILE_BIAS: [-16, 16, 1]
         checkCollision:
           down: yes
           left: yes
@@ -90,7 +92,6 @@ PROPS = Object.freeze
           x: [-1000, 1000, 10]
           y: [-1000, 1000, 10]
         isPaused: yes
-        OVERLAP_BIAS: [-16, 16, 1]
         skipQuadTree: yes
         sortDirection: addArcadeSortDirection
     scale:
