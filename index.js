@@ -80,6 +80,9 @@
         }
       },
       debug: {
+        font: true,
+        lineHeight: [10, 50, 2],
+        renderShadow: true,
         sprite: {
           visible: true
         }

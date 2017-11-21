@@ -62,6 +62,9 @@ PROPS = Object.freeze
         x: [0, 1, 0.05]
         y: [0, 1, 0.05]
     debug:
+      font: yes
+      lineHeight: [10, 50, 2]
+      renderShadow: yes
       sprite:
         visible: yes
     input:
