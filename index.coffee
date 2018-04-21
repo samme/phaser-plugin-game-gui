@@ -1,6 +1,12 @@
 "use strict"
 
-{dat, Phaser} = this
+dat = dat or window?.dat or @dat or require? "dat.gui"
+
+throw new Error "Can't find `dat`" unless dat
+
+Phaser = Phaser or window?.Phaser or @Phaser or require? "phaser"
+
+throw new Error "Can't find `Phaser`" unless Phaser
 
 {ScaleManager} = Phaser
 

@@ -5,7 +5,17 @@
     extend = function(child, parent) { for (var key in parent) { if (hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     hasProp = {}.hasOwnProperty;
 
-  dat = this.dat, Phaser = this.Phaser;
+  dat = dat || (typeof window !== "undefined" && window !== null ? window.dat : void 0) || this.dat || (typeof require === "function" ? require("dat.gui") : void 0);
+
+  if (!dat) {
+    throw new Error("Can't find `dat`");
+  }
+
+  Phaser = Phaser || (typeof window !== "undefined" && window !== null ? window.Phaser : void 0) || this.Phaser || (typeof require === "function" ? require("phaser") : void 0);
+
+  if (!Phaser) {
+    throw new Error("Can't find `Phaser`");
+  }
 
   ScaleManager = Phaser.ScaleManager;
 
